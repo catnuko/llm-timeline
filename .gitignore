@@ -27,3 +27,4 @@ dist-ssr
 大模型时间线.html
 *.zip
 .vercel
+.env*
