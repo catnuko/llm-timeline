@@ -1,52 +1,66 @@
 # LLM Timeline · 大模型时间线
 
-一条横向的中美大模型发布对抗时间线：上半区为中国模型（淡红），下半区为海外模型（淡蓝），轴线垂直居中，滚轮左右滚动。收录 2023.01 — 2026.11 共 147 条发布记录（中国 50 / 海外 97）。
+A horizontal timeline of large-language-model releases, 2023.01 → 2026.11. China sits above the axis on a warm wash, the rest of the world below on a cool one: 147 curated releases, drawn against a monthly scale, scrolled sideways.
 
-A horizontal timeline of LLM releases, China on the warm side, the rest of the world on the cool side. 147 entries from Jan 2023 to Nov 2026.
+**[Open the live timeline →](https://llm-timeline-amber.vercel.app/)** · [简体中文 README](README.zh-CN.md)
 
-## 技术栈 / Stack
+![LLM Timeline](public/og.jpg)
 
-- React 19 + TypeScript + Vite
-- Tailwind CSS v4
-- shadcn/ui（`base-nova` 预设，底层原语为 Base UI / built on Base UI）
-- lucide-react 图标
+## Features
 
-## 功能 / Features
+- **Horizontal timeline** — the mouse wheel pans sideways; drag, `←` / `→`, and 92–260 px/month zoom are also supported.
+- **Two camps, one axis** — Chinese models above the centred axis on a pale red band, overseas models below on a pale blue band.
+- **Month ticks and release dates** — every release day gets a tick and a date label; multiple releases on the same day are stacked and counted (`09.22 · 3`).
+- **Greedy lane packing** — cards that would collide fall into deeper lanes; when density gets extreme the cards switch to a single-line compact mode. Verified at 0 overlaps across three viewports and both themes.
+- **Chinese / English** — one click in the header switches every label, organisation name, and Chinese model name (文心一言 → ERNIE Bot, 混元 Hy4 → Hunyuan Hy4). The choice is persisted.
+- **Light / dark** — moon / sun toggle; first paint follows the OS preference with no flash.
+- **Hover inspector** — date, vendor, category tag, and a one-line note in the lower-left corner.
+- **Overview strip** — click to jump, plus year buttons and a "Latest" shortcut.
 
-- **双语**：右上角 `中 / EN` 切换界面语言，模型名与厂商名随之本地化，选择记入 localStorage
-- **明暗主题**：右上角月亮 / 太阳按钮切换黑白主题，首屏按系统偏好自动选择，无闪白
-- **横向时间线**：滚轮即横向滚动，支持拖拽平移、← → 翻页、92–260 px/月缩放
-- **刻度与日期**：按月份分格，发布日打点并在轴上标注日期，同日多模型合并计数
-- **分层布局**：同日多款模型自动贪心分层，密度过高时切换为单行紧凑卡片，保证零重叠
-- **悬停详情**：左下角 inspector 显示日期、厂商、标签与备注
-- **缩略导航**：底部概览条点击定位，年份按钮与「最新」快速跳转
+## Stack
 
-## 运行 / Run
+React 19 · TypeScript · Vite · Tailwind CSS v4 · shadcn/ui (Base UI primitives) · lucide-react
+
+## Run
 
 ```bash
 npm install
-npm run dev      # 本地开发
-npm run build    # 产物 dist/index.html（单文件，JS/CSS 已内联）
-npm run preview  # 预览构建产物
+npm run dev      # local dev server
+npm run build    # dist/index.html, JS & CSS inlined
+npm run preview  # preview the build
 ```
 
-## 部署 / Deploy
+## Deploy
 
-Vercel 直接导入本仓库即可：Framework 选 Vite，Build Command `npm run build`，Output Directory `dist`。
+The repository is linked to Vercel. Importing it elsewhere: framework **Vite**, build command `npm run build`, output directory `dist`.
 
-## 代码结构
+## Data
+
+`src/data/models.ts` holds 147 entries — 50 Chinese, 97 overseas — each shaped as:
+
+```ts
+{ date: '2026-09-22', name: 'Claude Opus 5.5', org: 'Anthropic', side: 'global', tag: '旗舰', note?: string }
+```
+
+Dates are public launch dates of a **curated sample**, not an exhaustive list. The Claude line (2 → 5.5), the Gemini line (1.0 → 4 Hydrogen) and every Llama 3 / 4 variant follow the vendors' own timelines. Meta has shipped no new flagship since Llama 4 in April 2025, so its 2026 lane is genuinely empty.
+
+Editing data is the whole contribution: append a record and the layout reflows by itself.
+
+## Structure
 
 ```
 src/
-├── data/models.ts        # 发布数据（date / name / org / side / tag / note）
-├── lib/timeline.ts       # 月份换算、像素坐标、贪心分层布局
-├── lib/i18n.ts           # 中英字典、厂商与模型名本地化
-├── components/ui/        # shadcn/ui 组件（Base UI 版）
-└── App.tsx               # 画布、刻度带、卡片、顶栏与底栏
+├── data/models.ts        # release records
+├── lib/timeline.ts       # month math, pixel mapping, greedy lane packing
+├── lib/i18n.ts           # zh/en dictionary, org & model name localisation
+├── components/ui/        # shadcn/ui components (Base UI)
+└── App.tsx               # canvas, scale band, cards, header, footer
 ```
 
-## 数据说明 / Data notes
+## Contributing
 
-日期取公开发布或上线日期，为人工整理的**代表性样本**，并非全量清单；Claude 全系（2 → 5.5）、Gemini 全系（1.0 → 4 Hydrogen）、Llama 3 / 4 各版本按官方时间线收录。Meta 自 2025-04 Llama 4 之后主线无新模型，故 2026 年留白。新增记录只需在 `src/data/models.ts` 追加一条，布局自动重排。
+Read [CONTRIBUTING.md](CONTRIBUTING.md) and [CLA.md](CLA.md). Commits must carry a `Signed-off-by` line (`git commit -s`).
 
-Dates are public launch dates of a **curated sample**, not an exhaustive list. Add a record to `src/data/models.ts` and the layout reflows automatically.
+## License
+
+[MIT](LICENSE) © 2026 catnuko

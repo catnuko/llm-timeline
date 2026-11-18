@@ -3,13 +3,103 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23f7f6f2'/%3E%3Crect x='6' y='6' width='20' height='8.5' rx='2' fill='%23b04a45'/%3E%3Crect x='6' y='17.5' width='20' height='8.5' rx='2' fill='%233b5c86'/%3E%3C/svg%3E" />
+
+    <title>LLM Timeline 大模型时间线 · 2023—2026 中美发布对照</title>
+    <meta
+      name="description"
+      content="147 条大模型发布记录的中美对照时间线（2023.01—2026.11）：上半区中国模型、下半区海外模型，按月份刻度呈现 Claude、Gemini、Llama、GPT、Qwen、DeepSeek 等各代发布时间。A horizontal timeline of 147 LLM releases."
+    />
+    <meta
+      name="keywords"
+      content="大模型时间线,LLM timeline,大模型发布,Claude,Gemini,Llama,GPT-5,DeepSeek,Qwen,AI 模型对比"
+    />
+    <meta name="author" content="catnuko" />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
+    <link rel="canonical" href="https://llm-timeline-amber.vercel.app/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://llm-timeline-amber.vercel.app/" />
+    <link rel="alternate" hreflang="en" href="https://llm-timeline-amber.vercel.app/" />
+    <link rel="alternate" hreflang="x-default" href="https://llm-timeline-amber.vercel.app/" />
+
+    <meta name="theme-color" content="#f7f6f2" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#121316" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="LLM Timeline" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:url" content="https://llm-timeline-amber.vercel.app/" />
+    <meta property="og:title" content="LLM Timeline 大模型时间线 · 2023—2026" />
+    <meta
+      property="og:description"
+      content="147 条发布记录，中国模型在上、海外模型在下。滚轮横向浏览 2023—2026 的每一次模型发布。"
+    />
+    <meta property="og:image" content="https://llm-timeline-amber.vercel.app/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="LLM Timeline 2023—2026 时间线分享封面" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="LLM Timeline 大模型时间线 · 2023—2026" />
+    <meta
+      name="twitter:description"
+      content="147 条大模型发布记录的中美对照时间线，中国模型在上、海外模型在下。"
+    />
+    <meta name="twitter:image" content="https://llm-timeline-amber.vercel.app/og.jpg" />
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23f7f6f2'/%3E%3Crect x='6' y='6' width='20' height='8.5' rx='2' fill='%23b04a45'/%3E%3Crect x='6' y='17.5' width='20' height='8.5' rx='2' fill='%233b5c86'/%3E%3C/svg%3E"
+    />
     <link rel="preconnect" href="https://miaoda.feishu.cn" crossorigin />
     <link
       rel="stylesheet"
       href="https://miaoda.feishu.cn/fonts/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap"
     />
-    <title>大模型时间线 · 2023—2026</title>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "LLM Timeline",
+        "alternateName": "大模型时间线",
+        "url": "https://llm-timeline-amber.vercel.app/",
+        "description": "147 条大模型发布记录的中美对照时间线，覆盖 2023 年 1 月至 2026 年 11 月。",
+        "inLanguage": ["zh-CN", "en"],
+        "isAccessibleForFree": true,
+        "license": "https://opensource.org/licenses/MIT",
+        "creator": {
+          "@type": "Person",
+          "name": "catnuko",
+          "url": "https://github.com/catnuko"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "name": "LLM release timeline 2023-01 to 2026-11",
+        "description": "中国与海外大语言模型发布日期的结构化数据集，含模型名、厂商、阵营与标签。",
+        "temporalCoverage": "2023-01-01/2026-11-30",
+        "spatialCoverage": "Global",
+        "license": "https://opensource.org/licenses/MIT",
+        "creator": {
+          "@type": "Person",
+          "name": "catnuko",
+          "url": "https://github.com/catnuko"
+        },
+        "isAccessibleForFree": true,
+        "distribution": {
+          "@type": "DataDownload",
+          "contentUrl": "https://raw.githubusercontent.com/catnuko/llm-timeline/master/src/data/models.ts",
+          "encodingFormat": "text/plain"
+        }
+      }
+    </script>
+
     <script>
       // 首屏前确定主题，避免闪白
       try {
@@ -26,6 +116,10 @@
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      这是一个需要 JavaScript 的交互式时间线。数据与源码见
+      <a href="https://github.com/catnuko/llm-timeline">github.com/catnuko/llm-timeline</a>。
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
