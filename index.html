@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23f7f6f2'/%3E%3Crect x='6' y='6' width='20' height='8.5' rx='2' fill='%23b04a45'/%3E%3Crect x='6' y='17.5' width='20' height='8.5' rx='2' fill='%233b5c86'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://miaoda.feishu.cn" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://miaoda.feishu.cn/fonts/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap"
+    />
+    <title>大模型时间线 · 2023—2026</title>
+    <script>
+      // 首屏前确定主题，避免闪白
+      try {
+        var t = localStorage.getItem('tl-theme')
+        if (!t) {
+          t = window.matchMedia('(prefers-color-scheme: dark)').matches
+            ? 'dark'
+            : 'light'
+        }
+        if (t === 'dark') document.documentElement.classList.add('dark')
+        document.documentElement.style.colorScheme = t
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
