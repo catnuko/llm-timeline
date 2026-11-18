@@ -1,0 +1,25 @@
+name: Smoke test
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 21 * * 0'
+
+jobs:
+  production:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch production assets
+        run: |
+          set -euo pipefail
+          base=https://llm-timeline-amber.vercel.app
+          code=$(curl -sSL -o /tmp/index.html -w "%{http_code}" "$base/")
+          echo "index.html: HTTP $code, $(wc -c < /tmp/index.html) bytes"
+          grep -q 'property="og:image"' /tmp/index.html && echo "og:image: present"
+          grep -q 'application/ld+json' /tmp/index.html && echo "json-ld: present"
+          grep -q 'rel="canonical"' /tmp/index.html && echo "canonical: present"
+          grep -q 'name="description"' /tmp/index.html && echo "description: present"
+          for p in robots.txt sitemap.xml og.jpg; do
+            c=$(curl -sSL -o /dev/null -w "%{http_code}" "$base/$p")
+            echo "$p: HTTP $c"
+          done
