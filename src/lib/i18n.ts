@@ -18,6 +18,8 @@ const ORG_EN: Record<string, string> = {
   字节跳动: 'ByteDance',
   华为: 'Huawei',
   美团: 'Meituan',
+  小米: 'Xiaomi',
+  阶跃星辰: 'StepFun',
   腾讯: 'Tencent',
   OpenAI: 'OpenAI',
   Anthropic: 'Anthropic',
@@ -42,6 +44,7 @@ const NAME_EN: Record<string, string> = {
   '日日新 5.0': 'SenseNova 5.0',
   '混元 Hy4': 'Hunyuan Hy4',
   '复旦 MOSS': 'Fudan MOSS',
+  '混元 Hy4-Flash': 'Hunyuan Hy4-Flash',
 }
 
 export function modelName(name: string, lang: Lang): string {

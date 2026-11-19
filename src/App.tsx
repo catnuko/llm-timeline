@@ -30,7 +30,7 @@ import {
 import { cn } from '@/lib/utils'
 
 const HEADER_H = 68
-const TOP_LIMIT = HEADER_H + 22
+const TOP_LIMIT = HEADER_H + 36
 const BOT_LIMIT = 58 + 24
 const MIN_PPM = 92
 const MAX_PPM = 260
