@@ -11,7 +11,7 @@ import {
 
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { RELEASES, type Side } from '@/data/models'
+import { RELEASES, type Openness } from '@/data/models'
 import { DICT, modelName, orgName, type Lang } from '@/lib/i18n'
 import {
   CARD_W,
@@ -44,20 +44,20 @@ interface DateChip {
 }
 
 const SIDE_STYLE: Record<
-  Side,
+  Openness,
   { text: string; card: string; stem: string; dot: string }
 > = {
-  cn: {
-    text: 'text-cn-deep',
-    card: 'border-cn/25 bg-panel/80 hover:border-cn/55',
-    stem: 'bg-cn/25',
-    dot: 'bg-cn',
+  open: {
+    text: 'text-open-deep',
+    card: 'border-open/25 bg-panel/80 hover:border-open/55',
+    stem: 'bg-open/25',
+    dot: 'bg-open',
   },
-  global: {
-    text: 'text-global-deep',
-    card: 'border-global/25 bg-panel/80 hover:border-global/55',
-    stem: 'bg-global/25',
-    dot: 'bg-global',
+  closed: {
+    text: 'text-closed-deep',
+    card: 'border-closed/25 bg-panel/80 hover:border-closed/55',
+    stem: 'bg-closed/25',
+    dot: 'bg-closed',
   },
 }
 
@@ -76,7 +76,7 @@ function ModelCard({
   onHover: (item: PlacedRelease) => void
   onLeave: () => void
 }) {
-  const style = SIDE_STYLE[item.side]
+  const style = SIDE_STYLE[item.openness]
   const label = modelName(item.name, lang)
   const compact = height < 34
   const ultra = height < 26
@@ -105,7 +105,7 @@ function ModelCard({
         className={cn(
           'absolute left-0 w-[2px] rounded-full',
           ultra ? 'top-[4px] bottom-[4px]' : 'top-[6px] bottom-[6px]',
-          item.side === 'cn' ? 'bg-cn/80' : 'bg-global/80'
+          item.openness === 'open' ? 'bg-open/80' : 'bg-closed/80'
         )}
       />
       {ultra ? (
@@ -245,40 +245,40 @@ export default function App() {
       140,
       Math.min(axisY - 60 - TOP_LIMIT, axisY - 60 - BOT_LIMIT)
     )
-    const cn = layoutSide(
-      RELEASES.filter((r) => r.side === 'cn'),
+    const open = layoutSide(
+      RELEASES.filter((r) => r.openness === 'open'),
       ppm
     )
-    const global = layoutSide(
-      RELEASES.filter((r) => r.side === 'global'),
+    const closed = layoutSide(
+      RELEASES.filter((r) => r.openness === 'closed'),
       ppm
     )
-    const lanes = Math.max(cn.lanes, global.lanes)
+    const lanes = Math.max(open.lanes, closed.lanes)
     const pitch = clamp(laneSpace / (lanes + 1), 24, 62)
     const cardH = Math.round(
       pitch >= 46 ? pitch - 10 : pitch >= 36 ? pitch - 6 : pitch - 4
     )
-    return { cn, global, pitch, cardH, lanes }
+    return { open, closed, pitch, cardH, lanes }
   }, [ppm, axisY])
 
   const months = useMemo(() => buildMonths(ppm), [ppm])
 
   const yearStats = useMemo(() => {
-    const map = new Map<number, { cn: number; global: number }>()
+    const map = new Map<number, { open: number; closed: number }>()
     for (const item of RELEASES) {
       const year = Number(item.date.slice(0, 4))
-      const current = map.get(year) ?? { cn: 0, global: 0 }
-      current[item.side] += 1
+      const current = map.get(year) ?? { open: 0, closed: 0 }
+      current[item.openness] += 1
       map.set(year, current)
     }
     return map
   }, [])
 
   const dateChips = useMemo(() => {
-    const build = (side: Side): DateChip[] => {
+    const build = (openness: Openness): DateChip[] => {
       const byDate = new Map<string, { count: number; x: number }>()
       for (const item of RELEASES) {
-        if (item.side !== side) continue
+        if (item.openness !== openness) continue
         const prev = byDate.get(item.date)
         if (prev) {
           prev.count += 1
@@ -301,7 +301,7 @@ export default function App() {
           if (value.x - half > rowRight[row] + 6) {
             rowRight[row] = value.x + half
             out.push({
-              key: `${side}-${date}`,
+              key: `${openness}-${date}`,
               x: value.x,
               label: formatDay(date),
               count: value.count,
@@ -313,7 +313,7 @@ export default function App() {
       }
       return out
     }
-    return { cn: build('cn'), global: build('global') }
+    return { open: build('open'), closed: build('closed') }
   }, [ppm])
 
   useEffect(() => {
@@ -422,10 +422,10 @@ export default function App() {
   const centerYear = START_YEAR + Math.floor(centerIdx / 12)
   const centerMonthIdx = (centerIdx % 12) + 1
 
-  const cnCount = RELEASES.filter((r) => r.side === 'cn').length
-  const globalCount = RELEASES.filter((r) => r.side === 'global').length
+  const openCount = RELEASES.filter((r) => r.openness === 'open').length
+  const closedCount = RELEASES.filter((r) => r.openness === 'closed').length
 
-  const renderDateChips = (side: Side, items: DateChip[]) => {
+  const renderDateChips = (openness: Openness, items: DateChip[]) => {
     if (ppm < 108) return null
     return items.map((chip) => (
       <div
@@ -433,15 +433,15 @@ export default function App() {
         style={{
           left: chip.x,
           top:
-            side === 'cn'
+            openness === 'open'
               ? axisY - 33 - chip.row * 18
               : axisY + 19 + chip.row * 18,
         }}
         className={cn(
           'pointer-events-none absolute z-20 -translate-x-1/2 rounded-[2px] px-1 py-[2px] font-mono text-[8.5px] leading-none tabular-nums backdrop-blur-[1px]',
-          side === 'cn'
-            ? 'bg-band/55 text-cn-deep/80'
-            : 'bg-band/55 text-global-deep/80'
+          openness === 'open'
+            ? 'bg-band/55 text-open-deep/80'
+            : 'bg-band/55 text-closed-deep/80'
         )}
       >
         {chip.label}
@@ -452,27 +452,27 @@ export default function App() {
     ))
   }
 
-  const renderCards = (placed: PlacedRelease[], side: Side) =>
+  const renderCards = (placed: PlacedRelease[], openness: Openness) =>
     placed.map((item) => {
       const top =
-        side === 'cn'
+        openness === 'open'
           ? axisY - 60 - item.lane * geometry.pitch - geometry.cardH
           : axisY + 60 + item.lane * geometry.pitch
-      const stemTop = side === 'cn' ? top + geometry.cardH : axisY + 2
+      const stemTop = openness === 'open' ? top + geometry.cardH : axisY + 2
       const stemHeight =
-        side === 'cn' ? axisY - 2 - (top + geometry.cardH) : top - axisY - 2
+        openness === 'open' ? axisY - 2 - (top + geometry.cardH) : top - axisY - 2
       return (
         <div key={`${item.date}-${item.name}`}>
           <div
             aria-hidden
-            className={cn('absolute z-10 w-px', SIDE_STYLE[side].stem)}
+            className={cn('absolute z-10 w-px', SIDE_STYLE[openness].stem)}
             style={{ left: item.x, top: stemTop, height: stemHeight }}
           />
           <div
             aria-hidden
             className={cn(
               'absolute z-20 size-[7px] -translate-x-1/2 -translate-y-1/2 rounded-full ring-2 ring-paper/80',
-              SIDE_STYLE[side].dot
+              SIDE_STYLE[openness].dot
             )}
             style={{ left: item.x, top: axisY }}
           />
@@ -493,10 +493,10 @@ export default function App() {
       ref={rootRef}
       className="relative h-dvh w-full overflow-hidden bg-paper font-sans text-ink antialiased select-none"
     >
-      <div aria-hidden className="absolute inset-x-0 top-0 h-1/2 bg-cn-wash" />
+      <div aria-hidden className="absolute inset-x-0 top-0 h-1/2 bg-open-wash" />
       <div
         aria-hidden
-        className="absolute inset-x-0 bottom-0 h-1/2 bg-global-wash"
+        className="absolute inset-x-0 bottom-0 h-1/2 bg-closed-wash"
       />
       <div aria-hidden className="canvas-dots absolute inset-x-0 top-0 h-1/2" />
       <div
@@ -505,15 +505,25 @@ export default function App() {
       />
 
       <div className="pointer-events-none absolute top-[80px] left-3 z-0 flex items-center gap-2 select-none">
-        <span className="h-px w-4 bg-cn/45" />
-        <span className="text-[10px] tracking-[0.22em] text-cn/60">
-          {t.sideCn}
+        <span className="h-px w-4 bg-open/45" />
+        <span
+          className={cn(
+            'text-[10px] text-open/60',
+            lang === 'zh' ? 'tracking-[0.08em]' : 'tracking-[0.22em]'
+          )}
+        >
+          {t.openLabel}
         </span>
       </div>
       <div className="pointer-events-none absolute bottom-[68px] left-3 z-0 flex items-center gap-2 select-none">
-        <span className="h-px w-4 bg-global/45" />
-        <span className="text-[10px] tracking-[0.22em] text-global/60">
-          {t.sideGlobal}
+        <span className="h-px w-4 bg-closed/45" />
+        <span
+          className={cn(
+            'text-[10px] text-closed/60',
+            lang === 'zh' ? 'tracking-[0.08em]' : 'tracking-[0.22em]'
+          )}
+        >
+          {t.closedLabel}
         </span>
       </div>
 
@@ -564,7 +574,7 @@ export default function App() {
                 key={`year-${year}`}
                 aria-hidden
                 className="absolute z-0"
-                style={{ left: x + 14, top: HEADER_H + 6 }}
+                style={{ left: x + 14, top: HEADER_H + 38 }}
               >
                 <div className="font-mono text-[20px] leading-none font-semibold tracking-[-0.02em] text-ink/18 tabular-nums">
                   {year}
@@ -572,12 +582,12 @@ export default function App() {
                 {stat && (
                   <div className="mt-1.5 flex items-center gap-2.5 font-mono text-[8.5px] leading-none tabular-nums text-ink/35">
                     <span className="flex items-center gap-1">
-                      <i className="h-[2px] w-2.5 bg-cn/55" />
-                      {stat.cn}
+                      <i className="h-[2px] w-2.5 bg-open/55" />
+                      {stat.open}
                     </span>
                     <span className="flex items-center gap-1">
-                      <i className="h-[2px] w-2.5 bg-global/55" />
-                      {stat.global}
+                      <i className="h-[2px] w-2.5 bg-closed/55" />
+                      {stat.closed}
                     </span>
                   </div>
                 )}
@@ -619,19 +629,19 @@ export default function App() {
             )
           })}
 
-          {renderDateChips('cn', dateChips.cn)}
-          {renderDateChips('global', dateChips.global)}
+          {renderDateChips('open', dateChips.open)}
+          {renderDateChips('closed', dateChips.closed)}
 
-          {renderCards(geometry.cn.items, 'cn')}
-          {renderCards(geometry.global.items, 'global')}
+          {renderCards(geometry.open.items, 'open')}
+          {renderCards(geometry.closed.items, 'closed')}
         </div>
       </div>
 
       <header className="absolute inset-x-0 top-0 z-[60] h-[68px] border-b border-ink/10 bg-paper/78 backdrop-blur-md">
         <div className="flex h-full items-center gap-4 px-5">
           <div aria-hidden className="grid h-7 w-7 shrink-0 grid-rows-2 gap-[2px]">
-            <span className="rounded-[2px] bg-cn" />
-            <span className="rounded-[2px] bg-global" />
+            <span className="rounded-[2px] bg-open" />
+            <span className="rounded-[2px] bg-closed" />
           </div>
           <div className="min-w-0">
             <h1 className="text-[19px] leading-none font-semibold tracking-[-0.02em]">
@@ -645,12 +655,12 @@ export default function App() {
           <div className="ml-auto flex items-center gap-4">
             <div className="hidden items-center gap-3 md:flex">
               <span className="flex items-center gap-1.5 font-mono text-[10.5px] tabular-nums text-ink/65">
-                <i className="size-[6px] rounded-full bg-cn" />
-                {cnCount}
+                <i className="size-[6px] rounded-full bg-open" />
+                {openCount}
               </span>
               <span className="flex items-center gap-1.5 font-mono text-[10.5px] tabular-nums text-ink/65">
-                <i className="size-[6px] rounded-full bg-global" />
-                {globalCount}
+                <i className="size-[6px] rounded-full bg-closed" />
+                {closedCount}
               </span>
             </div>
             <span className="hidden items-center gap-1 text-[10.5px] text-ink/45 lg:flex">
@@ -711,7 +721,7 @@ export default function App() {
             <span
               className={cn(
                 'font-mono text-[10px] tabular-nums',
-                SIDE_STYLE[hovered.side].text
+                SIDE_STYLE[hovered.openness].text
               )}
             >
               {hovered.date}
@@ -720,9 +730,9 @@ export default function App() {
               variant="outline"
               className={cn(
                 'h-[18px] rounded-[3px] px-1.5 text-[9px]',
-                hovered.side === 'cn'
-                  ? 'border-cn/30 bg-cn/8 text-cn-deep'
-                  : 'border-global/30 bg-global/8 text-global-deep'
+                hovered.openness === 'open'
+                  ? 'border-open/30 bg-open/8 text-open-deep'
+                  : 'border-closed/30 bg-closed/8 text-closed-deep'
               )}
             >
               {t.tags[hovered.tag]}
@@ -732,7 +742,7 @@ export default function App() {
             {modelName(hovered.name, lang)}
           </div>
           <div className="mt-1 text-[10.5px] text-ink/55">
-            {hovered.org} · {hovered.side === 'cn' ? t.cnName : t.globalName}
+            {hovered.org} · {hovered.openness === 'open' ? t.openName : t.closedName}
           </div>
           {hovered.note && (
             <p className="mt-2 border-t border-ink/8 pt-2 text-[10.5px] leading-relaxed text-ink/65">

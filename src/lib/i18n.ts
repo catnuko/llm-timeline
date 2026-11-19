@@ -50,7 +50,6 @@ export function modelName(name: string, lang: Lang): string {
 
 const TAG_EN: Record<ModelTag, string> = {
   旗舰: 'Flagship',
-  开源: 'Open source',
   推理: 'Reasoning',
   多模态: 'Multimodal',
   轻量: 'Lightweight',
@@ -60,8 +59,8 @@ const TAG_EN: Record<ModelTag, string> = {
 export interface Dict {
   title: string
   subtitle: string
-  sideCn: string
-  sideGlobal: string
+  openLabel: string
+  closedLabel: string
   pan: string
   viewport: string
   latest: string
@@ -70,17 +69,17 @@ export interface Dict {
   jump: string
   theme: string
   lang: string
-  cnName: string
-  globalName: string
+  openName: string
+  closedName: string
   tags: Record<ModelTag, string>
 }
 
 export const DICT: Record<Lang, Dict> = {
   zh: {
-    title: '大模型时间线',
-    subtitle: '2023.01 — 2026.11 · 上方中国模型 · 下方海外模型',
-    sideCn: '中国模型',
-    sideGlobal: '海外模型',
+    title: '开源 vs 闭源 · 大模型时间线',
+    subtitle: '2023.01 — 2026.11 · 上方开放权重 · 下方闭源',
+    openLabel: '开源（开放权重）',
+    closedLabel: '闭源',
     pan: '滚轮左右滚动',
     viewport: '视窗中心',
     latest: '最新',
@@ -89,15 +88,15 @@ export const DICT: Record<Lang, Dict> = {
     jump: '跳到',
     theme: '切换主题',
     lang: '切换语言',
-    cnName: '中国',
-    globalName: '海外',
+    openName: '开源',
+    closedName: '闭源',
     tags: TAG_EN,
   },
   en: {
-    title: 'LLM Timeline',
-    subtitle: '2023.01 — 2026.11 · China above · Global below',
-    sideCn: 'China',
-    sideGlobal: 'Global',
+    title: 'Open Weights vs Closed Source',
+    subtitle: '2023.01 — 2026.11 · open weights above · closed below',
+    openLabel: 'Open weights',
+    closedLabel: 'Closed',
     pan: 'Scroll to pan',
     viewport: 'In view',
     latest: 'Latest',
@@ -106,8 +105,8 @@ export const DICT: Record<Lang, Dict> = {
     jump: 'Jump to',
     theme: 'Toggle theme',
     lang: 'Switch language',
-    cnName: 'China',
-    globalName: 'Overseas',
+    openName: 'Open',
+    closedName: 'Closed',
     tags: TAG_EN,
   },
 }

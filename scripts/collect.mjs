@@ -135,6 +135,8 @@ async function fromHuggingFace() {
           source: 'huggingface',
           ref: m.id,
           likes: m.likes ?? 0,
+          // 上架 Hugging Face 官方组织，通常意味着开放权重
+          suggestedOpenness: 'open',
         })
       }
     } catch (e) {

@@ -39,8 +39,8 @@ Every added or changed record must be verifiable:
 3. `name` keeps the model's released name (`Claude Sonnet 4.6`, `Qwen3.5-Max`).
 4. `org` uses the vendor name already present in the file, so localisation keeps
    working.
-5. `side` is `cn` for mainland-Chinese vendors, `global` for everyone else.
-6. `tag` is one of `旗舰 / 开源 / 推理 / 多模态 / 轻量 / Agent`.
+5. `openness` is `open` when the weights are publicly downloadable at launch, `closed` otherwise. Judge each record, not the vendor: Qwen3 ships weights, Qwen3-Max does not.
+6. `tag` is one of `旗舰 / 推理 / 多模态 / 轻量 / Agent` — openness has its own field now.
 7. Put the source URL in the pull request description, one line per record.
 
 ## Commits
@@ -109,8 +109,8 @@ cd llm-timeline && npm install && npm run dev
 2. `date` 是公开发布日，`YYYY-MM-DD`；只知道月份时不要猜具体日，等确切日期公开再收录。
 3. `name` 用模型发布时的正式名（`Claude Sonnet 4.6`、`Qwen3.5-Max`）。
 4. `org` 用文件里已有的厂商名，避免破坏本地化映射。
-5. `side`：中国大陆厂商为 `cn`，其余为 `global`。
-6. `tag` 取 `旗舰 / 开源 / 推理 / 多模态 / 轻量 / Agent` 之一。
+5. `openness`：发布时权重可公开下载记 `open`，否则 `closed`。按记录判断，不按厂商——Qwen3 放权重，Qwen3-Max 不放。
+6. `tag` 取 `旗舰 / 推理 / 多模态 / 轻量 / Agent` 之一；开源与否已有独立字段。
 7. 在 PR 描述里逐条附上来源链接。
 
 ### 提交
