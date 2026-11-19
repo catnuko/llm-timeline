@@ -9,6 +9,7 @@ import {
   Sun,
 } from 'lucide-react'
 
+import { AxisFlow } from '@/components/AxisFlow'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { RELEASES, type Openness } from '@/data/models'
@@ -498,6 +499,9 @@ export default function App() {
         aria-hidden
         className="absolute inset-x-0 bottom-0 h-1/2 bg-closed-wash"
       />
+
+      {/* 轴线上的红蓝对抗场 */}
+      <AxisFlow axisY={axisY} scrollLeft={scrollLeft} dark={dark} />
       <div aria-hidden className="canvas-dots absolute inset-x-0 top-0 h-1/2" />
       <div
         aria-hidden

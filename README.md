@@ -13,6 +13,7 @@ A horizontal timeline of large-language-model releases, 2023.01 → 2026.11. Ope
 - **Month ticks and release dates** — every release day gets a tick and a date label; multiple releases on the same day are stacked and counted (`09.22 · 3`).
 - **Greedy lane packing** — cards that would collide fall into deeper lanes; when density gets extreme the cards switch to a single-line compact mode. Verified at 0 overlaps across three viewports and both themes.
 - **Chinese / English** — one click in the header switches every label, organisation name, and Chinese model name (文心一言 → ERNIE Bot, 混元 Hy4 → Hunyuan Hy4). The choice is persisted.
+- **Shader conflict field** — a hand-written WebGL fragment shader (domain-warped fBm, no three.js) runs a 420px band along the axis: red licks upward like flame, blue drifts like liquid, and the two eat into each other where they meet. Falls back to flat washes when WebGL is unavailable, and renders a single static frame under `prefers-reduced-motion`.
 - **Light / dark** — moon / sun toggle; first paint follows the OS preference with no flash.
 - **Hover inspector** — date, vendor, category tag, and a one-line note in the lower-left corner.
 - **Overview strip** — click to jump, plus year buttons and a "Latest" shortcut.
