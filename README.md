@@ -1,6 +1,6 @@
 # LLM Timeline · 大模型时间线
 
-A horizontal timeline of large-language-model releases, 2023.01 → 2026.11. Open-weight models sit above the axis on a warm wash, closed-source models below on a cool one: 166 curated releases, drawn against a monthly scale, scrolled sideways.
+A horizontal timeline of large-language-model releases, 2023.01 → 2026.11. Open-weight models sit above the axis on a warm wash, closed-source models below on a cool one: 169 curated releases, drawn against a monthly scale, scrolled sideways.
 
 **[Open the live timeline →](https://llm-timeline-amber.vercel.app/)** · [简体中文 README](README.zh-CN.md)
 
@@ -9,7 +9,7 @@ A horizontal timeline of large-language-model releases, 2023.01 → 2026.11. Ope
 ## Features
 
 - **Horizontal timeline** — the mouse wheel pans sideways; drag, `←` / `→`, and 92–260 px/month zoom are also supported.
-- **Two camps, one axis** — open weights above the centred axis on a pale red band, closed source below on a pale blue band. 71 open, 95 closed.
+- **Two camps, one axis** — open weights above the centred axis on a pale red band, closed source below on a pale blue band. 75 open, 94 closed.
 - **Month ticks and release dates** — every release day gets a tick and a date label; multiple releases on the same day are stacked and counted (`09.22 · 3`).
 - **Greedy lane packing** — cards that would collide fall into deeper lanes; when density gets extreme the cards switch to a single-line compact mode. Verified at 0 overlaps across three viewports and both themes.
 - **Chinese / English** — one click in the header switches every label, organisation name, and Chinese model name (文心一言 → ERNIE Bot, 混元 Hy4 → Hunyuan Hy4). The choice is persisted.
@@ -36,13 +36,15 @@ The repository is linked to Vercel. Importing it elsewhere: framework **Vite**, 
 
 ## Data
 
-`src/data/models.ts` holds 166 entries — 71 open-weight, 95 closed-source — each shaped as:
+`src/data/models.ts` holds 169 entries — 75 open-weight, 94 closed-source — each shaped as:
 
 ```ts
 { date: '2025-04-05', name: 'Llama 4 Maverick', org: 'Meta', openness: 'open', tag: '旗舰', note?: string }
 ```
 
 `openness` is decided **per record, not per vendor**: Qwen3 ships weights while Qwen3-Max does not; GLM-4.5 is open, GLM-5 is closed. "Open" here means *open weights* — weights are publicly downloadable, not OSI-style open source with training data and code. Some are Apache-2.0, some (Llama, Gemma) carry community or use restrictions.
+
+Dated checkpoints inside a family (`DeepSeek-V4.1-Flash-1017`, `DeepSeek-V3-0324`) get their own entry; only size, quantised and GGUF variants are collapsed.
 
 Dates are public launch dates of a **curated sample**, not an exhaustive list. The Claude line (2 → 5.5), the Gemini line (1.0 → 4 Hydrogen) and every Llama 3 / 4 variant follow the vendors' own timelines.
 
