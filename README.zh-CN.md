@@ -35,6 +35,13 @@ npm run preview  # 预览构建产物
 
 仓库已关联 Vercel。在其他平台导入时：框架选 **Vite**，构建命令 `npm run build`，输出目录 `dist`。
 
+## 自动化
+
+两条 GitHub Actions，让数据更新不需要人守着：
+
+- **`collect.yml`**：每周一 09:30（Asia/Shanghai）拉取 OpenRouter + Hugging Face，按 `scripts/apply-candidates.mjs` 里的硬规则落地，构建通过后自动开 PR 并在 `build` 检查变绿时自动合并。判定不了的一律不进正史，落到 `data/review.json` 并汇总到 `collect-review` issue：量化/ONNX 派生版、疑似重新上架的老模型、以及在 OpenRouter 上出现的开放权重模型。
+- **Vercel Git 集成**：`master` 每次 push 自动重新部署生产。
+
 ## 数据
 
 `src/data/models.ts` 共 166 条（开放权重 75 / 闭源 94），单条结构为：

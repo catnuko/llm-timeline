@@ -35,6 +35,13 @@ npm run preview  # preview the build
 
 The repository is linked to Vercel. Importing it elsewhere: framework **Vite**, build command `npm run build`, output directory `dist`.
 
+## Automation
+
+Two GitHub Actions keep the data honest without a human in the loop:
+
+- **`collect.yml`** — every Monday 09:30 Asia/Shanghai: pulls OpenRouter + Hugging Face, applies the strict rules in `scripts/apply-candidates.mjs`, builds, opens a PR and auto-merges it once the `build` check is green. Anything ambiguous (quantised / ONNX / re-listed old models / open-weight models surfaced through OpenRouter) is held back into `data/review.json` and posted to a pinned `collect-review` issue instead of being merged.
+- **Vercel Git integration** — production redeploys on every push to `master`.
+
 ## Data
 
 `src/data/models.ts` holds 169 entries — 75 open-weight, 94 closed-source — each shaped as:
