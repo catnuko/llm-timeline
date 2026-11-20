@@ -22,6 +22,8 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          # 用个人令牌，否则 GITHUB_TOKEN 建的 PR 不会触发 CI，required check 永远不来
+          token: ${{ secrets.BOT_TOKEN }}
 
       - uses: actions/setup-node@v4
         with:
@@ -67,7 +69,7 @@ jobs:
       - name: 开 PR 并开启自动合并
         if: steps.commit.outputs.changed == 'true'
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.BOT_TOKEN }}
         run: |
           set -e
           gh pr create \
@@ -80,7 +82,7 @@ jobs:
       - name: 待人工候选 → issue
         if: always()
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.BOT_TOKEN }}
         run: |
           node scripts/review-report.mjs --md > /tmp/review-body.md
           node -e "import('./data/review.json',{with:{type:'json'}}).then(m=>console.log(m.default.length)).catch(()=>console.log(0))" > /tmp/review-count.txt
