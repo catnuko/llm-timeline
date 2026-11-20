@@ -39,7 +39,7 @@ jobs:
         run: |
           npm run apply | tee /tmp/apply.log
           echo "---- 待人工 ----" >> /tmp/apply.log
-          node -e "const d=require('./data/review.json');console.log(d.length?d.map(x=>\`- ${x.date} · ${x.name} · ${x.org}（${x.reason}）\`).join('\\n'):'（空）')" >> /tmp/apply.log
+          node scripts/review-report.mjs >> /tmp/apply.log
 
       - name: 构建校验
         run: npm run build
@@ -82,14 +82,8 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          node -e "
-            const fs=require('fs');
-            let d=[]; try{ d=JSON.parse(fs.readFileSync('data/review.json','utf8')) }catch{}
-            const body='以下候选未自动收录，需要人工判断（多为派生格式、疑似重新上架或开闭源口径存疑）：\n\n'+
-              d.map(x=>'- \`'+x.date+' · '+x.name+' · '+x.org+'\` — '+x.reason).join('\n');
-            fs.writeFileSync('/tmp/review-body.md', d.length?body:'本轮没有待人工候选。');
-            console.log(d.length);
-          " > /tmp/review-count.txt
+          node scripts/review-report.mjs --md > /tmp/review-body.md
+          node -e "import('./data/review.json',{with:{type:'json'}}).then(m=>console.log(m.default.length)).catch(()=>console.log(0))" > /tmp/review-count.txt
           COUNT=$(cat /tmp/review-count.txt)
           [ "$COUNT" = "0" ] && exit 0
           gh label create collect-review --color FFD39A --description "候选采集待人工确认" 2>/dev/null || true
