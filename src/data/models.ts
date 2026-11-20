@@ -93,6 +93,9 @@ export const RELEASES: Release[] = [
   { date: '2026-09-30', name: 'Mistral Large 4', org: 'Mistral AI', openness: 'open', tag: '旗舰', note: '1T 总参 / 52B 激活，权重公开' },
   { date: '2026-10-17', name: 'DeepSeek-V4.1-Flash-1017', org: 'DeepSeek', openness: 'open', tag: '轻量', note: 'V4.1-Flash 的 10 月 17 日 checkpoint' },
   { date: '2026-11-02', name: 'Kimi-K3.1-Pro', org: '月之暗面', openness: 'open', tag: '旗舰', note: '旗舰档同样放权重' },
+  { date: '2026-11-06', name: 'Sage-SciPerception', org: '上海 AI 实验室', openness: 'open', tag: '旗舰' },
+  { date: '2026-11-14', name: 'WeVisForensics', org: '腾讯', openness: 'open', tag: '旗舰' },
+  { date: '2026-11-15', name: 'Sage-S2.1-Flash', org: '上海 AI 实验室', openness: 'open', tag: '轻量' },
   { date: '2026-11-17', name: '混元 Hy4-Flash', org: '腾讯', openness: 'open', tag: '轻量', note: 'Hy4 的开放权重轻量版' },
 
   // ============ 闭源 ============
@@ -191,7 +194,14 @@ export const RELEASES: Release[] = [
   { date: '2026-09-30', name: 'Gemini 4 Argon', org: 'Google', openness: 'closed', tag: '旗舰', note: 'Gemini 4 系列首款旗舰' },
   { date: '2026-10-07', name: 'GPT-6 Instant', org: 'OpenAI', openness: 'closed', tag: '轻量', note: '随智能界面一同上线' },
   { date: '2026-10-26', name: 'GPT-6.1 Terra', org: 'OpenAI', openness: 'closed', tag: '轻量' },
+  { date: '2026-11-09', name: 'Muse Ember', org: 'Meta', openness: 'closed', tag: '旗舰' },
+  { date: '2026-11-09', name: 'Claude Fable 5.2', org: 'Anthropic', openness: 'closed', tag: '旗舰' },
+  { date: '2026-11-10', name: 'Gemini 4 Carbon', org: 'Google', openness: 'closed', tag: '旗舰' },
+  { date: '2026-11-10', name: 'ERNIE-Light-DT-1.0', org: '百度', openness: 'closed', tag: '旗舰' },
   { date: '2026-11-11', name: 'Qwen4-Max-Preview', org: '阿里巴巴', openness: 'closed', tag: '旗舰', note: '新一代基座，2.4 万亿参数 / 710 亿激活' },
   { date: '2026-11-12', name: 'Gemini 4 Hydrogen', org: 'Google', openness: 'closed', tag: '旗舰' },
+  { date: '2026-11-16', name: 'Qwen4 Max', org: '阿里巴巴', openness: 'closed', tag: '旗舰' },
+  { date: '2026-11-17', name: 'GPT-6.2 Sol', org: 'OpenAI', openness: 'closed', tag: '旗舰' },
   { date: '2026-11-18', name: 'GPT-6.2 Astra', org: 'OpenAI', openness: 'closed', tag: '旗舰', note: '与 GPT-6.2 Sol 同日发布' },
+  { date: '2026-11-18', name: 'Gemini 4 Neon', org: 'Google', openness: 'closed', tag: '旗舰' },
 ]

@@ -1,0 +1,231 @@
+[
+  {
+    "date": "2026-11-20",
+    "name": "Pixtral Large 2502",
+    "org": "Mistral AI",
+    "source": "openrouter",
+    "ref": "mistralai/pixtral-large-2502",
+    "firstSeen": "2026-11-20",
+    "reason": "版本号 2502 早于收录日期，疑似重新上架"
+  },
+  {
+    "date": "2026-11-18",
+    "name": "Aion-1.0-Instruct-2.3B",
+    "org": "微软",
+    "source": "huggingface",
+    "ref": "microsoft/Aion-1.0-Instruct-2.3B",
+    "firstSeen": "2026-11-19",
+    "reason": "小于 4B"
+  },
+  {
+    "date": "2026-11-18",
+    "name": "Aion-1.0-Instruct-2.3B-ONNX-WebGPU",
+    "org": "微软",
+    "source": "huggingface",
+    "ref": "microsoft/Aion-1.0-Instruct-2.3B-ONNX-WebGPU",
+    "firstSeen": "2026-11-19",
+    "reason": "派生格式"
+  },
+  {
+    "date": "2026-11-17",
+    "name": "Hy4-flash-FP8",
+    "org": "腾讯",
+    "source": "huggingface",
+    "ref": "tencent/Hy4-flash-FP8",
+    "firstSeen": "2026-11-19",
+    "reason": "派生格式"
+  },
+  {
+    "date": "2026-11-17",
+    "name": "Hy4-flash-base",
+    "org": "腾讯",
+    "source": "huggingface",
+    "ref": "tencent/Hy4-flash-base",
+    "firstSeen": "2026-11-19",
+    "reason": "派生格式"
+  },
+  {
+    "date": "2026-11-17",
+    "name": "GPT-6.2 Sol Pro",
+    "org": "OpenAI",
+    "source": "openrouter",
+    "ref": "openai/gpt-6.2-sol-pro",
+    "firstSeen": "2026-11-19",
+    "reason": "GPT-6.2 Sol 已收录或本轮已收，Pro 档折叠"
+  },
+  {
+    "date": "2026-11-17",
+    "name": "GPT-6.2 Astra Pro",
+    "org": "OpenAI",
+    "source": "openrouter",
+    "ref": "openai/gpt-6.2-astra-pro",
+    "firstSeen": "2026-11-19",
+    "reason": "GPT-6.2 Astra 已收录或本轮已收，Pro 档折叠"
+  },
+  {
+    "date": "2026-11-17",
+    "name": "Hy4-flash",
+    "org": "腾讯",
+    "source": "huggingface",
+    "ref": "tencent/Hy4-flash",
+    "likes": 391,
+    "suggestedOpenness": "open",
+    "firstSeen": "2026-11-20",
+    "reason": "同族已有更早记录（混元 Hy4-Flash 2026-11-17）"
+  },
+  {
+    "date": "2026-11-16",
+    "name": "Hy4 flash",
+    "org": "腾讯",
+    "source": "openrouter",
+    "ref": "tencent/hy4-flash",
+    "firstSeen": "2026-11-19",
+    "reason": "OpenRouter 上架的开放权重模型，口径需人工确认"
+  },
+  {
+    "date": "2026-11-13",
+    "name": "Sage-S2.1-Flash-FP8",
+    "org": "上海 AI 实验室",
+    "source": "huggingface",
+    "ref": "internlm/Sage-S2.1-Flash-FP8",
+    "firstSeen": "2026-11-19",
+    "reason": "派生格式"
+  },
+  {
+    "date": "2026-11-11",
+    "name": "Kimi-K3.1-Pro-NVFP4",
+    "org": "NVIDIA",
+    "source": "huggingface",
+    "ref": "nvidia/Kimi-K3.1-Pro-NVFP4",
+    "firstSeen": "2026-11-19",
+    "reason": "派生格式"
+  },
+  {
+    "date": "2026-11-11",
+    "name": "Qwen3.5-4B-Qwen3.8-27B-Draft",
+    "org": "NVIDIA",
+    "source": "huggingface",
+    "ref": "nvidia/Qwen3.5-4B-Qwen3.8-27B-Draft",
+    "firstSeen": "2026-11-19",
+    "reason": "派生格式"
+  },
+  {
+    "date": "2026-11-11",
+    "name": "Qwen3.5-0.8B-Qwen3.8-27B-Draft",
+    "org": "NVIDIA",
+    "source": "huggingface",
+    "ref": "nvidia/Qwen3.5-0.8B-Qwen3.8-27B-Draft",
+    "firstSeen": "2026-11-19",
+    "reason": "派生格式"
+  },
+  {
+    "date": "2026-11-11",
+    "name": "Llama-3.2-1B-Qwen3.8-27B-Draft",
+    "org": "NVIDIA",
+    "source": "huggingface",
+    "ref": "nvidia/Llama-3.2-1B-Qwen3.8-27B-Draft",
+    "firstSeen": "2026-11-19",
+    "reason": "派生格式"
+  },
+  {
+    "date": "2026-11-09",
+    "name": "Nemotron-Labs-Sigma-distill-3B-nfe2",
+    "org": "NVIDIA",
+    "source": "huggingface",
+    "ref": "nvidia/Nemotron-Labs-Sigma-distill-3B-nfe2",
+    "firstSeen": "2026-11-19",
+    "reason": "厂商不在时间线内"
+  },
+  {
+    "date": "2026-11-09",
+    "name": "Nemotron-Labs-Sigma-distill-3B-nfe4",
+    "org": "NVIDIA",
+    "source": "huggingface",
+    "ref": "nvidia/Nemotron-Labs-Sigma-distill-3B-nfe4",
+    "firstSeen": "2026-11-19",
+    "reason": "厂商不在时间线内"
+  },
+  {
+    "date": "2026-11-09",
+    "name": "Nemotron-Labs-Sigma-distill-3B-nfe16",
+    "org": "NVIDIA",
+    "source": "huggingface",
+    "ref": "nvidia/Nemotron-Labs-Sigma-distill-3B-nfe16",
+    "firstSeen": "2026-11-19",
+    "reason": "厂商不在时间线内"
+  },
+  {
+    "date": "2026-11-09",
+    "name": "Nemotron-Labs-Sigma-distill-spec-8B",
+    "org": "NVIDIA",
+    "source": "huggingface",
+    "ref": "nvidia/Nemotron-Labs-Sigma-distill-spec-8B",
+    "firstSeen": "2026-11-19",
+    "reason": "厂商不在时间线内"
+  },
+  {
+    "date": "2026-11-09",
+    "name": "Nemotron-Labs-Sigma-distill-3B-nfe8",
+    "org": "NVIDIA",
+    "source": "huggingface",
+    "ref": "nvidia/Nemotron-Labs-Sigma-distill-3B-nfe8",
+    "firstSeen": "2026-11-19",
+    "reason": "厂商不在时间线内"
+  },
+  {
+    "date": "2026-11-09",
+    "name": "Nemotron-Labs-Sigma-distill-8B-nfe2",
+    "org": "NVIDIA",
+    "source": "huggingface",
+    "ref": "nvidia/Nemotron-Labs-Sigma-distill-8B-nfe2",
+    "firstSeen": "2026-11-19",
+    "reason": "厂商不在时间线内"
+  },
+  {
+    "date": "2026-11-09",
+    "name": "Nemotron-Labs-Sigma-distill-8B-nfe4",
+    "org": "NVIDIA",
+    "source": "huggingface",
+    "ref": "nvidia/Nemotron-Labs-Sigma-distill-8B-nfe4",
+    "firstSeen": "2026-11-19",
+    "reason": "厂商不在时间线内"
+  },
+  {
+    "date": "2026-11-09",
+    "name": "Nemotron-Labs-Sigma-distill-8B-nfe8",
+    "org": "NVIDIA",
+    "source": "huggingface",
+    "ref": "nvidia/Nemotron-Labs-Sigma-distill-8B-nfe8",
+    "firstSeen": "2026-11-19",
+    "reason": "厂商不在时间线内"
+  },
+  {
+    "date": "2026-11-09",
+    "name": "Nemotron-Labs-Sigma-distill-8B-nfe16",
+    "org": "NVIDIA",
+    "source": "huggingface",
+    "ref": "nvidia/Nemotron-Labs-Sigma-distill-8B-nfe16",
+    "firstSeen": "2026-11-19",
+    "reason": "厂商不在时间线内"
+  },
+  {
+    "date": "2026-11-09",
+    "name": "Nemotron-Labs-Sigma-distill-spec-3B",
+    "org": "NVIDIA",
+    "source": "huggingface",
+    "ref": "nvidia/Nemotron-Labs-Sigma-distill-spec-3B",
+    "firstSeen": "2026-11-19",
+    "reason": "厂商不在时间线内"
+  },
+  {
+    "date": "2026-11-07",
+    "name": "Qwen3.8-27B-DSpine-b16",
+    "org": "腾讯",
+    "source": "huggingface",
+    "ref": "tencent/Qwen3.8-27B-DSpine-b16",
+    "likes": 317,
+    "suggestedOpenness": "open",
+    "firstSeen": "2026-11-20",
+    "reason": "派生格式"
+  }
+]

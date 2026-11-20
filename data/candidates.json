@@ -1,10 +1,18 @@
 [
   {
-    "date": "2026-11-18",
-    "name": "Google: Gemini 4 Neon",
-    "org": "Google",
+    "date": "2026-11-20",
+    "name": "Pixtral Large 2502",
+    "org": "Mistral",
     "source": "openrouter",
-    "ref": "google/gemini-4-neon",
+    "ref": "mistralai/pixtral-large-2502",
+    "firstSeen": "2026-11-20"
+  },
+  {
+    "date": "2026-11-18",
+    "name": "Aion-1.0-Instruct-2.3B",
+    "org": "微软",
+    "source": "huggingface",
+    "ref": "microsoft/Aion-1.0-Instruct-2.3B",
     "firstSeen": "2026-11-19"
   },
   {
@@ -17,58 +25,10 @@
   },
   {
     "date": "2026-11-18",
-    "name": "Aion-1.0-Instruct-2.3B",
-    "org": "微软",
-    "source": "huggingface",
-    "ref": "microsoft/Aion-1.0-Instruct-2.3B",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-11-18",
-    "name": "Gemini 4 Neon",
+    "name": "Google: Gemini 4 Neon",
     "org": "Google",
     "source": "openrouter",
     "ref": "google/gemini-4-neon",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-11-17",
-    "name": "OpenAI: GPT-6.2 Astra Pro",
-    "org": "OpenAI",
-    "source": "openrouter",
-    "ref": "openai/gpt-6.2-astra-pro",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-11-17",
-    "name": "OpenAI: GPT-6.2 Astra",
-    "org": "OpenAI",
-    "source": "openrouter",
-    "ref": "openai/gpt-6.2-astra",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-11-17",
-    "name": "OpenAI: GPT-6.2 Sol Pro",
-    "org": "OpenAI",
-    "source": "openrouter",
-    "ref": "openai/gpt-6.2-sol-pro",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-11-17",
-    "name": "OpenAI: GPT-6.2 Sol",
-    "org": "OpenAI",
-    "source": "openrouter",
-    "ref": "openai/gpt-6.2-sol",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-11-17",
-    "name": "Hy4-flash-base",
-    "org": "腾讯",
-    "source": "huggingface",
-    "ref": "tencent/Hy4-flash-base",
     "firstSeen": "2026-11-19"
   },
   {
@@ -81,15 +41,15 @@
   },
   {
     "date": "2026-11-17",
-    "name": "GPT-6.2 Astra Pro",
-    "org": "OpenAI",
-    "source": "openrouter",
-    "ref": "openai/gpt-6.2-astra-pro",
+    "name": "Hy4-flash-base",
+    "org": "腾讯",
+    "source": "huggingface",
+    "ref": "tencent/Hy4-flash-base",
     "firstSeen": "2026-11-19"
   },
   {
     "date": "2026-11-17",
-    "name": "GPT-6.2 Sol",
+    "name": "OpenAI: GPT-6.2 Sol",
     "org": "OpenAI",
     "source": "openrouter",
     "ref": "openai/gpt-6.2-sol",
@@ -97,12 +57,52 @@
   },
   {
     "date": "2026-11-17",
+    "name": "OpenAI: GPT-6.2 Sol Pro",
+    "org": "OpenAI",
+    "source": "openrouter",
+    "ref": "openai/gpt-6.2-sol-pro",
+    "firstSeen": "2026-11-19"
+  },
+  {
+    "date": "2026-11-17",
+    "name": "OpenAI: GPT-6.2 Astra",
+    "org": "OpenAI",
+    "source": "openrouter",
+    "ref": "openai/gpt-6.2-astra",
+    "firstSeen": "2026-11-19"
+  },
+  {
+    "date": "2026-11-17",
+    "name": "OpenAI: GPT-6.2 Astra Pro",
+    "org": "OpenAI",
+    "source": "openrouter",
+    "ref": "openai/gpt-6.2-astra-pro",
+    "firstSeen": "2026-11-19"
+  },
+  {
+    "date": "2026-11-17",
+    "name": "GPT-6.2 Astra Pro",
+    "org": "OpenAI",
+    "source": "openrouter",
+    "ref": "openai/gpt-6.2-astra-pro",
+    "firstSeen": "2026-11-20"
+  },
+  {
+    "date": "2026-11-17",
     "name": "Hy4-flash",
     "org": "腾讯",
     "source": "huggingface",
     "ref": "tencent/Hy4-flash",
-    "likes": 235,
+    "likes": 391,
     "suggestedOpenness": "open",
+    "firstSeen": "2026-11-20"
+  },
+  {
+    "date": "2026-11-16",
+    "name": "Qwen: Qwen4 Max",
+    "org": "阿里巴巴",
+    "source": "openrouter",
+    "ref": "qwen/qwen4-max",
     "firstSeen": "2026-11-19"
   },
   {
@@ -115,37 +115,11 @@
   },
   {
     "date": "2026-11-16",
-    "name": "Qwen: Qwen4 Max",
-    "org": "阿里巴巴",
-    "source": "openrouter",
-    "ref": "qwen/qwen4-max",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-11-16",
     "name": "Hy4 flash",
     "org": "腾讯",
     "source": "openrouter",
     "ref": "tencent/hy4-flash",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-11-16",
-    "name": "Qwen4 Max",
-    "org": "阿里巴巴",
-    "source": "openrouter",
-    "ref": "qwen/qwen4-max",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-11-15",
-    "name": "Sage-S2.1-Flash",
-    "org": "internlm",
-    "source": "huggingface",
-    "ref": "internlm/Sage-S2.1-Flash",
-    "likes": 138,
-    "suggestedOpenness": "open",
-    "firstSeen": "2026-11-19"
+    "firstSeen": "2026-11-20"
   },
   {
     "date": "2026-11-13",
@@ -165,18 +139,10 @@
   },
   {
     "date": "2026-11-11",
-    "name": "Llama-3.2-1B-Qwen3.8-27B-Draft",
+    "name": "Kimi-K3.1-Pro-NVFP4",
     "org": "NVIDIA",
     "source": "huggingface",
-    "ref": "nvidia/Llama-3.2-1B-Qwen3.8-27B-Draft",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-11-11",
-    "name": "Qwen3.5-0.8B-Qwen3.8-27B-Draft",
-    "org": "NVIDIA",
-    "source": "huggingface",
-    "ref": "nvidia/Qwen3.5-0.8B-Qwen3.8-27B-Draft",
+    "ref": "nvidia/Kimi-K3.1-Pro-NVFP4",
     "firstSeen": "2026-11-19"
   },
   {
@@ -189,18 +155,18 @@
   },
   {
     "date": "2026-11-11",
-    "name": "Kimi-K3.1-Pro-NVFP4",
+    "name": "Qwen3.5-0.8B-Qwen3.8-27B-Draft",
     "org": "NVIDIA",
     "source": "huggingface",
-    "ref": "nvidia/Kimi-K3.1-Pro-NVFP4",
+    "ref": "nvidia/Qwen3.5-0.8B-Qwen3.8-27B-Draft",
     "firstSeen": "2026-11-19"
   },
   {
-    "date": "2026-11-10",
-    "name": "Baidu: ERNIE-Light-DT-1.0",
-    "org": "百度",
-    "source": "openrouter",
-    "ref": "baidu/ernie-light-dt-1.0-intl",
+    "date": "2026-11-11",
+    "name": "Llama-3.2-1B-Qwen3.8-27B-Draft",
+    "org": "NVIDIA",
+    "source": "huggingface",
+    "ref": "nvidia/Llama-3.2-1B-Qwen3.8-27B-Draft",
     "firstSeen": "2026-11-19"
   },
   {
@@ -213,106 +179,10 @@
   },
   {
     "date": "2026-11-10",
-    "name": "ERNIE-Light-DT-1.0",
+    "name": "Baidu: ERNIE-Light-DT-1.0",
     "org": "百度",
     "source": "openrouter",
     "ref": "baidu/ernie-light-dt-1.0-intl",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-11-10",
-    "name": "Gemini 4 Carbon",
-    "org": "Google",
-    "source": "openrouter",
-    "ref": "google/gemini-4-carbon",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-11-09",
-    "name": "Anthropic: Claude Fable 5.2",
-    "org": "Anthropic",
-    "source": "openrouter",
-    "ref": "anthropic/claude-fable-5.2",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-11-09",
-    "name": "Meta: Muse Ember",
-    "org": "Meta",
-    "source": "openrouter",
-    "ref": "meta/muse-ember",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-11-09",
-    "name": "Nemotron-Labs-Sigma-distill-spec-3B",
-    "org": "NVIDIA",
-    "source": "huggingface",
-    "ref": "nvidia/Nemotron-Labs-Sigma-distill-spec-3B",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-11-09",
-    "name": "Nemotron-Labs-Sigma-distill-8B-nfe16",
-    "org": "NVIDIA",
-    "source": "huggingface",
-    "ref": "nvidia/Nemotron-Labs-Sigma-distill-8B-nfe16",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-11-09",
-    "name": "Nemotron-Labs-Sigma-distill-8B-nfe8",
-    "org": "NVIDIA",
-    "source": "huggingface",
-    "ref": "nvidia/Nemotron-Labs-Sigma-distill-8B-nfe8",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-11-09",
-    "name": "Nemotron-Labs-Sigma-distill-8B-nfe4",
-    "org": "NVIDIA",
-    "source": "huggingface",
-    "ref": "nvidia/Nemotron-Labs-Sigma-distill-8B-nfe4",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-11-09",
-    "name": "Nemotron-Labs-Sigma-distill-8B-nfe2",
-    "org": "NVIDIA",
-    "source": "huggingface",
-    "ref": "nvidia/Nemotron-Labs-Sigma-distill-8B-nfe2",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-11-09",
-    "name": "Nemotron-Labs-Sigma-distill-3B-nfe8",
-    "org": "NVIDIA",
-    "source": "huggingface",
-    "ref": "nvidia/Nemotron-Labs-Sigma-distill-3B-nfe8",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-11-09",
-    "name": "Nemotron-Labs-Sigma-distill-spec-8B",
-    "org": "NVIDIA",
-    "source": "huggingface",
-    "ref": "nvidia/Nemotron-Labs-Sigma-distill-spec-8B",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-11-09",
-    "name": "Nemotron-Labs-Sigma-distill-3B-nfe16",
-    "org": "NVIDIA",
-    "source": "huggingface",
-    "ref": "nvidia/Nemotron-Labs-Sigma-distill-3B-nfe16",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-11-09",
-    "name": "Nemotron-Labs-Sigma-distill-3B-nfe4",
-    "org": "NVIDIA",
-    "source": "huggingface",
-    "ref": "nvidia/Nemotron-Labs-Sigma-distill-3B-nfe4",
     "firstSeen": "2026-11-19"
   },
   {
@@ -325,18 +195,90 @@
   },
   {
     "date": "2026-11-09",
-    "name": "Claude Fable 5.2",
-    "org": "Anthropic",
-    "source": "openrouter",
-    "ref": "anthropic/claude-fable-5.2",
+    "name": "Nemotron-Labs-Sigma-distill-3B-nfe4",
+    "org": "NVIDIA",
+    "source": "huggingface",
+    "ref": "nvidia/Nemotron-Labs-Sigma-distill-3B-nfe4",
     "firstSeen": "2026-11-19"
   },
   {
     "date": "2026-11-09",
-    "name": "Muse Ember",
+    "name": "Nemotron-Labs-Sigma-distill-3B-nfe16",
+    "org": "NVIDIA",
+    "source": "huggingface",
+    "ref": "nvidia/Nemotron-Labs-Sigma-distill-3B-nfe16",
+    "firstSeen": "2026-11-19"
+  },
+  {
+    "date": "2026-11-09",
+    "name": "Nemotron-Labs-Sigma-distill-spec-8B",
+    "org": "NVIDIA",
+    "source": "huggingface",
+    "ref": "nvidia/Nemotron-Labs-Sigma-distill-spec-8B",
+    "firstSeen": "2026-11-19"
+  },
+  {
+    "date": "2026-11-09",
+    "name": "Nemotron-Labs-Sigma-distill-3B-nfe8",
+    "org": "NVIDIA",
+    "source": "huggingface",
+    "ref": "nvidia/Nemotron-Labs-Sigma-distill-3B-nfe8",
+    "firstSeen": "2026-11-19"
+  },
+  {
+    "date": "2026-11-09",
+    "name": "Nemotron-Labs-Sigma-distill-8B-nfe2",
+    "org": "NVIDIA",
+    "source": "huggingface",
+    "ref": "nvidia/Nemotron-Labs-Sigma-distill-8B-nfe2",
+    "firstSeen": "2026-11-19"
+  },
+  {
+    "date": "2026-11-09",
+    "name": "Nemotron-Labs-Sigma-distill-8B-nfe4",
+    "org": "NVIDIA",
+    "source": "huggingface",
+    "ref": "nvidia/Nemotron-Labs-Sigma-distill-8B-nfe4",
+    "firstSeen": "2026-11-19"
+  },
+  {
+    "date": "2026-11-09",
+    "name": "Nemotron-Labs-Sigma-distill-8B-nfe8",
+    "org": "NVIDIA",
+    "source": "huggingface",
+    "ref": "nvidia/Nemotron-Labs-Sigma-distill-8B-nfe8",
+    "firstSeen": "2026-11-19"
+  },
+  {
+    "date": "2026-11-09",
+    "name": "Nemotron-Labs-Sigma-distill-8B-nfe16",
+    "org": "NVIDIA",
+    "source": "huggingface",
+    "ref": "nvidia/Nemotron-Labs-Sigma-distill-8B-nfe16",
+    "firstSeen": "2026-11-19"
+  },
+  {
+    "date": "2026-11-09",
+    "name": "Nemotron-Labs-Sigma-distill-spec-3B",
+    "org": "NVIDIA",
+    "source": "huggingface",
+    "ref": "nvidia/Nemotron-Labs-Sigma-distill-spec-3B",
+    "firstSeen": "2026-11-19"
+  },
+  {
+    "date": "2026-11-09",
+    "name": "Meta: Muse Ember",
     "org": "Meta",
     "source": "openrouter",
     "ref": "meta/muse-ember",
+    "firstSeen": "2026-11-19"
+  },
+  {
+    "date": "2026-11-09",
+    "name": "Anthropic: Claude Fable 5.2",
+    "org": "Anthropic",
+    "source": "openrouter",
+    "ref": "anthropic/claude-fable-5.2",
     "firstSeen": "2026-11-19"
   },
   {
@@ -345,26 +287,16 @@
     "org": "腾讯",
     "source": "huggingface",
     "ref": "tencent/Qwen3.8-27B-DSpine-b16",
-    "likes": 316,
+    "likes": 317,
     "suggestedOpenness": "open",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-11-06",
-    "name": "Sage-SciPerception",
-    "org": "internlm",
-    "source": "huggingface",
-    "ref": "internlm/Sage-SciPerception",
-    "likes": 12,
-    "suggestedOpenness": "open",
-    "firstSeen": "2026-11-19"
+    "firstSeen": "2026-11-20"
   },
   {
     "date": "2026-11-05",
-    "name": "Google: Gemini Omni 1.2 Flash",
-    "org": "Google",
-    "source": "openrouter",
-    "ref": "google/gemini-omni-1.2-flash",
+    "name": "maniflow-tb",
+    "org": "allenai",
+    "source": "huggingface",
+    "ref": "allenai/maniflow-tb",
     "firstSeen": "2026-11-19"
   },
   {
@@ -377,10 +309,10 @@
   },
   {
     "date": "2026-11-05",
-    "name": "maniflow-tb",
-    "org": "allenai",
-    "source": "huggingface",
-    "ref": "allenai/maniflow-tb",
+    "name": "Google: Gemini Omni 1.2 Flash",
+    "org": "Google",
+    "source": "openrouter",
+    "ref": "google/gemini-omni-1.2-flash",
     "firstSeen": "2026-11-19"
   },
   {
@@ -389,7 +321,7 @@
     "org": "Google",
     "source": "openrouter",
     "ref": "google/gemini-omni-1.2-flash",
-    "firstSeen": "2026-11-19"
+    "firstSeen": "2026-11-20"
   },
   {
     "date": "2026-11-05",
@@ -399,6 +331,14 @@
     "ref": "nvidia/MetricTrail",
     "likes": 26,
     "suggestedOpenness": "open",
+    "firstSeen": "2026-11-20"
+  },
+  {
+    "date": "2026-11-04",
+    "name": "Tencent: Hy4",
+    "org": "腾讯",
+    "source": "openrouter",
+    "ref": "tencent/hy4",
     "firstSeen": "2026-11-19"
   },
   {
@@ -411,19 +351,11 @@
   },
   {
     "date": "2026-11-04",
-    "name": "Tencent: Hy4",
-    "org": "腾讯",
-    "source": "openrouter",
-    "ref": "tencent/hy4",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-11-04",
     "name": "Gemini Omni 1.1 Flash",
     "org": "Google",
     "source": "openrouter",
     "ref": "google/gemini-omni-1.1-flash",
-    "firstSeen": "2026-11-19"
+    "firstSeen": "2026-11-20"
   },
   {
     "date": "2026-11-04",
@@ -431,6 +363,16 @@
     "org": "腾讯",
     "source": "openrouter",
     "ref": "tencent/hy4",
+    "firstSeen": "2026-11-20"
+  },
+  {
+    "date": "2026-11-02",
+    "name": "Kimi-K3.1-Pro",
+    "org": "月之暗面",
+    "source": "huggingface",
+    "ref": "moonshotai/Kimi-K3.1-Pro",
+    "likes": 2231,
+    "suggestedOpenness": "open",
     "firstSeen": "2026-11-19"
   },
   {
@@ -447,17 +389,7 @@
     "org": "智谱 AI",
     "source": "openrouter",
     "ref": "z-ai/glm-5.3-flashx-legal",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-11-02",
-    "name": "Kimi-K3.1-Pro",
-    "org": "月之暗面",
-    "source": "huggingface",
-    "ref": "moonshotai/Kimi-K3.1-Pro",
-    "likes": 2231,
-    "suggestedOpenness": "open",
-    "firstSeen": "2026-11-19"
+    "firstSeen": "2026-11-20"
   },
   {
     "date": "2026-10-30",
@@ -473,9 +405,19 @@
     "org": "微软",
     "source": "huggingface",
     "ref": "microsoft/Mage-VL-Cowork",
-    "likes": 230,
+    "likes": 232,
     "suggestedOpenness": "open",
-    "firstSeen": "2026-11-19"
+    "firstSeen": "2026-11-20"
+  },
+  {
+    "date": "2026-10-29",
+    "name": "Hy4",
+    "org": "腾讯",
+    "source": "huggingface",
+    "ref": "tencent/Hy4",
+    "likes": 63,
+    "suggestedOpenness": "open",
+    "firstSeen": "2026-11-20"
   },
   {
     "date": "2026-10-27",
@@ -485,6 +427,14 @@
     "ref": "nvidia/Metatron-v1",
     "likes": 18,
     "suggestedOpenness": "open",
+    "firstSeen": "2026-11-20"
+  },
+  {
+    "date": "2026-10-26",
+    "name": "OpenAI: GPT-6.1 Terra",
+    "org": "OpenAI",
+    "source": "openrouter",
+    "ref": "openai/gpt-6.1-terra",
     "firstSeen": "2026-11-19"
   },
   {
@@ -497,21 +447,13 @@
   },
   {
     "date": "2026-10-26",
-    "name": "OpenAI: GPT-6.1 Terra",
-    "org": "OpenAI",
-    "source": "openrouter",
-    "ref": "openai/gpt-6.1-terra",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-10-26",
     "name": "Unlimited-OCR-2",
     "org": "百度",
     "source": "huggingface",
     "ref": "baidu/Unlimited-OCR-2",
-    "likes": 711,
+    "likes": 714,
     "suggestedOpenness": "open",
-    "firstSeen": "2026-11-19"
+    "firstSeen": "2026-11-20"
   },
   {
     "date": "2026-10-24",
@@ -519,24 +461,16 @@
     "org": "腾讯",
     "source": "huggingface",
     "ref": "tencent/Hy-Nomas-Diffusers",
-    "likes": 14,
+    "likes": 13,
     "suggestedOpenness": "open",
-    "firstSeen": "2026-11-19"
+    "firstSeen": "2026-11-20"
   },
   {
     "date": "2026-10-23",
-    "name": "MoonshotAI: Kimi K3.1 Pro",
+    "name": "Kimi K3.1 Pro",
     "org": "月之暗面",
     "source": "openrouter",
     "ref": "moonshotai/kimi-k3.1-pro",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-10-23",
-    "name": "Sage-S2.1-FP8",
-    "org": "internlm",
-    "source": "huggingface",
-    "ref": "internlm/Sage-S2.1-FP8",
     "firstSeen": "2026-11-19"
   },
   {
@@ -549,7 +483,15 @@
   },
   {
     "date": "2026-10-23",
-    "name": "Kimi K3.1 Pro",
+    "name": "Sage-S2.1-FP8",
+    "org": "internlm",
+    "source": "huggingface",
+    "ref": "internlm/Sage-S2.1-FP8",
+    "firstSeen": "2026-11-19"
+  },
+  {
+    "date": "2026-10-23",
+    "name": "MoonshotAI: Kimi K3.1 Pro",
     "org": "月之暗面",
     "source": "openrouter",
     "ref": "moonshotai/kimi-k3.1-pro",
@@ -563,7 +505,7 @@
     "ref": "internlm/Sage-S2.1",
     "likes": 20,
     "suggestedOpenness": "open",
-    "firstSeen": "2026-11-19"
+    "firstSeen": "2026-11-20"
   },
   {
     "date": "2026-10-23",
@@ -571,24 +513,16 @@
     "org": "NVIDIA",
     "source": "huggingface",
     "ref": "nvidia/MotionBricks",
-    "likes": 140,
+    "likes": 141,
     "suggestedOpenness": "open",
-    "firstSeen": "2026-11-19"
+    "firstSeen": "2026-11-20"
   },
   {
     "date": "2026-10-22",
-    "name": "Hy-SimulMT-30B-A3B-Interleave-GGUF",
+    "name": "Hy-SimulMT-30B-A3B-FP8",
     "org": "腾讯",
     "source": "huggingface",
-    "ref": "tencent/Hy-SimulMT-30B-A3B-Interleave-GGUF",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-10-22",
-    "name": "Hy-SimulMT-30B-A3B-Interleave-FP8",
-    "org": "腾讯",
-    "source": "huggingface",
-    "ref": "tencent/Hy-SimulMT-30B-A3B-Interleave-FP8",
+    "ref": "tencent/Hy-SimulMT-30B-A3B-FP8",
     "firstSeen": "2026-11-19"
   },
   {
@@ -601,10 +535,18 @@
   },
   {
     "date": "2026-10-22",
-    "name": "Hy-SimulMT-30B-A3B-FP8",
+    "name": "Hy-SimulMT-30B-A3B-Interleave-FP8",
     "org": "腾讯",
     "source": "huggingface",
-    "ref": "tencent/Hy-SimulMT-30B-A3B-FP8",
+    "ref": "tencent/Hy-SimulMT-30B-A3B-Interleave-FP8",
+    "firstSeen": "2026-11-19"
+  },
+  {
+    "date": "2026-10-22",
+    "name": "Hy-SimulMT-30B-A3B-Interleave-GGUF",
+    "org": "腾讯",
+    "source": "huggingface",
+    "ref": "tencent/Hy-SimulMT-30B-A3B-Interleave-GGUF",
     "firstSeen": "2026-11-19"
   },
   {
@@ -615,7 +557,7 @@
     "ref": "tencent/WeVisOne-VL-4B",
     "likes": 128,
     "suggestedOpenness": "open",
-    "firstSeen": "2026-11-19"
+    "firstSeen": "2026-11-20"
   },
   {
     "date": "2026-10-22",
@@ -623,9 +565,9 @@
     "org": "腾讯",
     "source": "huggingface",
     "ref": "tencent/WeVisOne-VL-2B",
-    "likes": 88,
+    "likes": 87,
     "suggestedOpenness": "open",
-    "firstSeen": "2026-11-19"
+    "firstSeen": "2026-11-20"
   },
   {
     "date": "2026-10-22",
@@ -633,9 +575,9 @@
     "org": "腾讯",
     "source": "huggingface",
     "ref": "tencent/Hy-SimulMT-30B-A3B-Interleave",
-    "likes": 17,
+    "likes": 16,
     "suggestedOpenness": "open",
-    "firstSeen": "2026-11-19"
+    "firstSeen": "2026-11-20"
   },
   {
     "date": "2026-10-22",
@@ -643,9 +585,9 @@
     "org": "腾讯",
     "source": "huggingface",
     "ref": "tencent/Hy-SimulMT-30B-A3B",
-    "likes": 48,
+    "likes": 49,
     "suggestedOpenness": "open",
-    "firstSeen": "2026-11-19"
+    "firstSeen": "2026-11-20"
   },
   {
     "date": "2026-10-22",
@@ -655,6 +597,14 @@
     "ref": "nvidia/InternVideo2-CLIP-anomaly-detection",
     "likes": 23,
     "suggestedOpenness": "open",
+    "firstSeen": "2026-11-20"
+  },
+  {
+    "date": "2026-10-21",
+    "name": "ERNIE-5.5-Flash-Base-BF16",
+    "org": "百度",
+    "source": "huggingface",
+    "ref": "baidu/ERNIE-5.5-Flash-Base-BF16",
     "firstSeen": "2026-11-19"
   },
   {
@@ -667,52 +617,20 @@
   },
   {
     "date": "2026-10-21",
-    "name": "ERNIE-5.5-Flash-Base-BF16",
-    "org": "百度",
-    "source": "huggingface",
-    "ref": "baidu/ERNIE-5.5-Flash-Base-BF16",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-10-21",
     "name": "Hy-Nomas",
     "org": "腾讯",
     "source": "huggingface",
     "ref": "tencent/Hy-Nomas",
     "likes": 156,
     "suggestedOpenness": "open",
-    "firstSeen": "2026-11-19"
+    "firstSeen": "2026-11-20"
   },
   {
     "date": "2026-10-19",
-    "name": "MiniMax: MiniMax M3.1 Flash",
-    "org": "MiniMax",
-    "source": "openrouter",
-    "ref": "minimax/minimax-m3.1-flash",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-10-19",
-    "name": "Hy-Memory-30B-A3B-GGUF",
-    "org": "腾讯",
-    "source": "huggingface",
-    "ref": "tencent/Hy-Memory-30B-A3B-GGUF",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-10-19",
-    "name": "cosmos3-nano-libero10-sdg-export-S5_2_s43",
+    "name": "cosmos3-nano-libero10-sdg-export-S2_s43",
     "org": "NVIDIA",
     "source": "huggingface",
-    "ref": "nvidia/cosmos3-nano-libero10-sdg-export-S5_2_s43",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-10-19",
-    "name": "Cosmos3-H-Embodied-Nano",
-    "org": "NVIDIA",
-    "source": "huggingface",
-    "ref": "nvidia/Cosmos3-H-Embodied-Nano",
+    "ref": "nvidia/cosmos3-nano-libero10-sdg-export-S2_s43",
     "firstSeen": "2026-11-19"
   },
   {
@@ -725,10 +643,34 @@
   },
   {
     "date": "2026-10-19",
-    "name": "cosmos3-nano-libero10-sdg-export-S2_s43",
+    "name": "Cosmos3-H-Embodied-Nano",
     "org": "NVIDIA",
     "source": "huggingface",
-    "ref": "nvidia/cosmos3-nano-libero10-sdg-export-S2_s43",
+    "ref": "nvidia/Cosmos3-H-Embodied-Nano",
+    "firstSeen": "2026-11-19"
+  },
+  {
+    "date": "2026-10-19",
+    "name": "cosmos3-nano-libero10-sdg-export-S5_2_s43",
+    "org": "NVIDIA",
+    "source": "huggingface",
+    "ref": "nvidia/cosmos3-nano-libero10-sdg-export-S5_2_s43",
+    "firstSeen": "2026-11-19"
+  },
+  {
+    "date": "2026-10-19",
+    "name": "Hy-Memory-30B-A3B-GGUF",
+    "org": "腾讯",
+    "source": "huggingface",
+    "ref": "tencent/Hy-Memory-30B-A3B-GGUF",
+    "firstSeen": "2026-11-19"
+  },
+  {
+    "date": "2026-10-19",
+    "name": "MiniMax: MiniMax M3.1 Flash",
+    "org": "MiniMax",
+    "source": "openrouter",
+    "ref": "minimax/minimax-m3.1-flash",
     "firstSeen": "2026-11-19"
   },
   {
@@ -737,7 +679,7 @@
     "org": "MiniMax",
     "source": "openrouter",
     "ref": "minimax/minimax-m3.1-flash",
-    "firstSeen": "2026-11-19"
+    "firstSeen": "2026-11-20"
   },
   {
     "date": "2026-10-19",
@@ -747,6 +689,14 @@
     "ref": "nvidia/Cosmos3-H-Dreams",
     "likes": 11,
     "suggestedOpenness": "open",
+    "firstSeen": "2026-11-20"
+  },
+  {
+    "date": "2026-10-17",
+    "name": "DeepSeek V4.1 Flash 1017",
+    "org": "DeepSeek",
+    "source": "openrouter",
+    "ref": "deepseek/deepseek-v4.1-flash-1017",
     "firstSeen": "2026-11-19"
   },
   {
@@ -759,44 +709,20 @@
   },
   {
     "date": "2026-10-17",
-    "name": "DeepSeek V4.1 Flash 1017",
-    "org": "DeepSeek",
-    "source": "openrouter",
-    "ref": "deepseek/deepseek-v4.1-flash-1017",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-10-17",
     "name": "Sentiment-Analysis-7B",
     "org": "微软",
     "source": "huggingface",
     "ref": "microsoft/Sentiment-Analysis-7B",
-    "likes": 34,
+    "likes": 36,
     "suggestedOpenness": "open",
-    "firstSeen": "2026-11-19"
+    "firstSeen": "2026-11-20"
   },
   {
     "date": "2026-10-16",
-    "name": "Hy-Memory-30B-A3B-FP8",
-    "org": "腾讯",
-    "source": "huggingface",
-    "ref": "tencent/Hy-Memory-30B-A3B-FP8",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-10-16",
-    "name": "scFM-dataselection",
-    "org": "微软",
-    "source": "huggingface",
-    "ref": "microsoft/scFM-dataselection",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-10-16",
-    "name": "NVIDIA-Nemotron-Labs-Dory1.0-4B-NVFP4",
+    "name": "NVIDIA-Nemotron-Labs-Dory1.0-4B-GGUF",
     "org": "NVIDIA",
     "source": "huggingface",
-    "ref": "nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-NVFP4",
+    "ref": "nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-GGUF",
     "firstSeen": "2026-11-19"
   },
   {
@@ -809,10 +735,26 @@
   },
   {
     "date": "2026-10-16",
-    "name": "NVIDIA-Nemotron-Labs-Dory1.0-4B-GGUF",
+    "name": "NVIDIA-Nemotron-Labs-Dory1.0-4B-NVFP4",
     "org": "NVIDIA",
     "source": "huggingface",
-    "ref": "nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-GGUF",
+    "ref": "nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-NVFP4",
+    "firstSeen": "2026-11-19"
+  },
+  {
+    "date": "2026-10-16",
+    "name": "scFM-dataselection",
+    "org": "微软",
+    "source": "huggingface",
+    "ref": "microsoft/scFM-dataselection",
+    "firstSeen": "2026-11-19"
+  },
+  {
+    "date": "2026-10-16",
+    "name": "Hy-Memory-30B-A3B-FP8",
+    "org": "腾讯",
+    "source": "huggingface",
+    "ref": "tencent/Hy-Memory-30B-A3B-FP8",
     "firstSeen": "2026-11-19"
   },
   {
@@ -823,7 +765,7 @@
     "ref": "tencent/Qwen3-8B-DSpine-b16",
     "likes": 34,
     "suggestedOpenness": "open",
-    "firstSeen": "2026-11-19"
+    "firstSeen": "2026-11-20"
   },
   {
     "date": "2026-10-16",
@@ -833,7 +775,7 @@
     "ref": "nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-MXFP8",
     "likes": 10,
     "suggestedOpenness": "open",
-    "firstSeen": "2026-11-19"
+    "firstSeen": "2026-11-20"
   },
   {
     "date": "2026-10-16",
@@ -843,71 +785,7 @@
     "ref": "nvidia/Muse-Spark-Open-816B-A42B-DFlash2",
     "likes": 10,
     "suggestedOpenness": "open",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-10-15",
-    "name": "Meta: Muse Spark Open",
-    "org": "Meta",
-    "source": "openrouter",
-    "ref": "meta/muse-spark-open",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-10-15",
-    "name": "NVIDIA: Nemotron 3.5 Super VL",
-    "org": "NVIDIA",
-    "source": "openrouter",
-    "ref": "nvidia/nemotron-3.5-super-vl",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-10-15",
-    "name": "Mistral-Large-4-1T-A52B-NVFP4",
-    "org": "Mistral",
-    "source": "huggingface",
-    "ref": "mistralai/Mistral-Large-4-1T-A52B-NVFP4",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-10-15",
-    "name": "RFD4-Proteina-prep",
-    "org": "NVIDIA",
-    "source": "huggingface",
-    "ref": "nvidia/RFD4-Proteina-prep",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-10-15",
-    "name": "Nemotron-3.5-Rerank-8B-BF16",
-    "org": "NVIDIA",
-    "source": "huggingface",
-    "ref": "nvidia/Nemotron-3.5-Rerank-8B-BF16",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-10-15",
-    "name": "RFD4-Proteina-Diffusers",
-    "org": "NVIDIA",
-    "source": "huggingface",
-    "ref": "nvidia/RFD4-Proteina-Diffusers",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-10-15",
-    "name": "Muse Spark Open",
-    "org": "Meta",
-    "source": "openrouter",
-    "ref": "meta/muse-spark-open",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-10-15",
-    "name": "Nemotron 3.5 Super VL",
-    "org": "NVIDIA",
-    "source": "openrouter",
-    "ref": "nvidia/nemotron-3.5-super-vl",
-    "firstSeen": "2026-11-19"
+    "firstSeen": "2026-11-20"
   },
   {
     "date": "2026-10-15",
@@ -920,12 +798,68 @@
     "firstSeen": "2026-11-19"
   },
   {
-    "date": "2026-10-14",
-    "name": "Step-5-Preview-NVFP4",
-    "org": "stepfun-ai",
+    "date": "2026-10-15",
+    "name": "RFD4-Proteina-Diffusers",
+    "org": "NVIDIA",
     "source": "huggingface",
-    "ref": "stepfun-ai/Step-5-Preview-NVFP4",
+    "ref": "nvidia/RFD4-Proteina-Diffusers",
     "firstSeen": "2026-11-19"
+  },
+  {
+    "date": "2026-10-15",
+    "name": "Nemotron-3.5-Rerank-8B-BF16",
+    "org": "NVIDIA",
+    "source": "huggingface",
+    "ref": "nvidia/Nemotron-3.5-Rerank-8B-BF16",
+    "firstSeen": "2026-11-19"
+  },
+  {
+    "date": "2026-10-15",
+    "name": "RFD4-Proteina-prep",
+    "org": "NVIDIA",
+    "source": "huggingface",
+    "ref": "nvidia/RFD4-Proteina-prep",
+    "firstSeen": "2026-11-19"
+  },
+  {
+    "date": "2026-10-15",
+    "name": "Mistral-Large-4-1T-A52B-NVFP4",
+    "org": "Mistral",
+    "source": "huggingface",
+    "ref": "mistralai/Mistral-Large-4-1T-A52B-NVFP4",
+    "firstSeen": "2026-11-19"
+  },
+  {
+    "date": "2026-10-15",
+    "name": "NVIDIA: Nemotron 3.5 Super VL",
+    "org": "NVIDIA",
+    "source": "openrouter",
+    "ref": "nvidia/nemotron-3.5-super-vl",
+    "firstSeen": "2026-11-19"
+  },
+  {
+    "date": "2026-10-15",
+    "name": "Meta: Muse Spark Open",
+    "org": "Meta",
+    "source": "openrouter",
+    "ref": "meta/muse-spark-open",
+    "firstSeen": "2026-11-19"
+  },
+  {
+    "date": "2026-10-15",
+    "name": "Muse Spark Open",
+    "org": "Meta",
+    "source": "openrouter",
+    "ref": "meta/muse-spark-open",
+    "firstSeen": "2026-11-20"
+  },
+  {
+    "date": "2026-10-15",
+    "name": "Nemotron 3.5 Super VL",
+    "org": "NVIDIA",
+    "source": "openrouter",
+    "ref": "nvidia/nemotron-3.5-super-vl",
+    "firstSeen": "2026-11-20"
   },
   {
     "date": "2026-10-14",
@@ -937,13 +871,21 @@
   },
   {
     "date": "2026-10-14",
+    "name": "Step-5-Preview-NVFP4",
+    "org": "stepfun-ai",
+    "source": "huggingface",
+    "ref": "stepfun-ai/Step-5-Preview-NVFP4",
+    "firstSeen": "2026-11-19"
+  },
+  {
+    "date": "2026-10-14",
     "name": "Timestral-123M",
     "org": "Mistral",
     "source": "huggingface",
     "ref": "mistralai/Timestral-123M",
     "likes": 47,
     "suggestedOpenness": "open",
-    "firstSeen": "2026-11-19"
+    "firstSeen": "2026-11-20"
   },
   {
     "date": "2026-10-14",
@@ -953,7 +895,7 @@
     "ref": "mistralai/Timestral-28M",
     "likes": 56,
     "suggestedOpenness": "open",
-    "firstSeen": "2026-11-19"
+    "firstSeen": "2026-11-20"
   },
   {
     "date": "2026-10-14",
@@ -961,9 +903,9 @@
     "org": "Mistral",
     "source": "huggingface",
     "ref": "mistralai/Timestral-5M",
-    "likes": 88,
+    "likes": 90,
     "suggestedOpenness": "open",
-    "firstSeen": "2026-11-19"
+    "firstSeen": "2026-11-20"
   },
   {
     "date": "2026-10-14",
@@ -971,9 +913,9 @@
     "org": "Mistral",
     "source": "huggingface",
     "ref": "mistralai/Timestral-209M",
-    "likes": 497,
+    "likes": 499,
     "suggestedOpenness": "open",
-    "firstSeen": "2026-11-19"
+    "firstSeen": "2026-11-20"
   },
   {
     "date": "2026-10-14",
@@ -981,40 +923,16 @@
     "org": "微软",
     "source": "huggingface",
     "ref": "microsoft/UserRepGen-4B",
-    "likes": 28,
+    "likes": 29,
     "suggestedOpenness": "open",
-    "firstSeen": "2026-11-19"
+    "firstSeen": "2026-11-20"
   },
   {
     "date": "2026-10-13",
-    "name": "Google: Gemini 4 Argon",
-    "org": "Google",
-    "source": "openrouter",
-    "ref": "google/gemini-4-argon",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-10-13",
-    "name": "GR00T-N1.7-AppleToPlate-cosine40k-checkpoint-15000",
+    "name": "Cosmos-AnomalyGen-PCB-Nano",
     "org": "NVIDIA",
     "source": "huggingface",
-    "ref": "nvidia/GR00T-N1.7-AppleToPlate-cosine40k-checkpoint-15000",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-10-13",
-    "name": "ARDY-SOMA-RP-30FPS-KimodoRep-Horizon60",
-    "org": "NVIDIA",
-    "source": "huggingface",
-    "ref": "nvidia/ARDY-SOMA-RP-30FPS-KimodoRep-Horizon60",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-10-13",
-    "name": "Cosmos-AnomalyGen-Glass-Nano",
-    "org": "NVIDIA",
-    "source": "huggingface",
-    "ref": "nvidia/Cosmos-AnomalyGen-Glass-Nano",
+    "ref": "nvidia/Cosmos-AnomalyGen-PCB-Nano",
     "firstSeen": "2026-11-19"
   },
   {
@@ -1027,10 +945,34 @@
   },
   {
     "date": "2026-10-13",
-    "name": "Cosmos-AnomalyGen-PCB-Nano",
+    "name": "Cosmos-AnomalyGen-Glass-Nano",
     "org": "NVIDIA",
     "source": "huggingface",
-    "ref": "nvidia/Cosmos-AnomalyGen-PCB-Nano",
+    "ref": "nvidia/Cosmos-AnomalyGen-Glass-Nano",
+    "firstSeen": "2026-11-19"
+  },
+  {
+    "date": "2026-10-13",
+    "name": "ARDY-SOMA-RP-30FPS-KimodoRep-Horizon60",
+    "org": "NVIDIA",
+    "source": "huggingface",
+    "ref": "nvidia/ARDY-SOMA-RP-30FPS-KimodoRep-Horizon60",
+    "firstSeen": "2026-11-19"
+  },
+  {
+    "date": "2026-10-13",
+    "name": "GR00T-N1.7-AppleToPlate-cosine40k-checkpoint-15000",
+    "org": "NVIDIA",
+    "source": "huggingface",
+    "ref": "nvidia/GR00T-N1.7-AppleToPlate-cosine40k-checkpoint-15000",
+    "firstSeen": "2026-11-19"
+  },
+  {
+    "date": "2026-10-13",
+    "name": "Google: Gemini 4 Argon",
+    "org": "Google",
+    "source": "openrouter",
+    "ref": "google/gemini-4-argon",
     "firstSeen": "2026-11-19"
   },
   {
@@ -1041,7 +983,7 @@
     "ref": "nvidia/Kimodo-SOMA-RP-ArdyRep-v1.2",
     "likes": 20,
     "suggestedOpenness": "open",
-    "firstSeen": "2026-11-19"
+    "firstSeen": "2026-11-20"
   },
   {
     "date": "2026-10-13",
@@ -1049,8 +991,16 @@
     "org": "NVIDIA",
     "source": "huggingface",
     "ref": "nvidia/Kimodo-SOMA-RP-v1.2",
-    "likes": 32,
+    "likes": 33,
     "suggestedOpenness": "open",
+    "firstSeen": "2026-11-20"
+  },
+  {
+    "date": "2026-10-12",
+    "name": "HiRO-ACEv2",
+    "org": "allenai",
+    "source": "huggingface",
+    "ref": "allenai/HiRO-ACEv2",
     "firstSeen": "2026-11-19"
   },
   {
@@ -1063,29 +1013,11 @@
   },
   {
     "date": "2026-10-12",
-    "name": "HiRO-ACEv2",
-    "org": "allenai",
-    "source": "huggingface",
-    "ref": "allenai/HiRO-ACEv2",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-10-12",
     "name": "Muse Wonder",
     "org": "Meta",
     "source": "openrouter",
     "ref": "meta/muse-wonder",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-10-09",
-    "name": "Qwen-Image-2.1-Turbo",
-    "org": "阿里巴巴",
-    "source": "huggingface",
-    "ref": "Qwen/Qwen-Image-2.1-Turbo",
-    "likes": 1146,
-    "suggestedOpenness": "open",
-    "firstSeen": "2026-11-19"
+    "firstSeen": "2026-11-20"
   },
   {
     "date": "2026-10-09",
@@ -1096,6 +1028,16 @@
     "likes": 133,
     "suggestedOpenness": "open",
     "firstSeen": "2026-11-19"
+  },
+  {
+    "date": "2026-10-09",
+    "name": "Qwen-Image-2.1-Turbo",
+    "org": "阿里巴巴",
+    "source": "huggingface",
+    "ref": "Qwen/Qwen-Image-2.1-Turbo",
+    "likes": 1150,
+    "suggestedOpenness": "open",
+    "firstSeen": "2026-11-20"
   },
   {
     "date": "2026-10-08",
@@ -1111,7 +1053,7 @@
     "org": "阶跃星辰",
     "source": "openrouter",
     "ref": "stepfun/step-5-preview",
-    "firstSeen": "2026-11-19"
+    "firstSeen": "2026-11-20"
   },
   {
     "date": "2026-10-08",
@@ -1121,7 +1063,7 @@
     "ref": "mistralai/LIDstral-Arabic",
     "likes": 30,
     "suggestedOpenness": "open",
-    "firstSeen": "2026-11-19"
+    "firstSeen": "2026-11-20"
   },
   {
     "date": "2026-10-08",
@@ -1131,7 +1073,7 @@
     "ref": "mistralai/Voxtral-Mini-4B-Realtime-Arabic",
     "likes": 56,
     "suggestedOpenness": "open",
-    "firstSeen": "2026-11-19"
+    "firstSeen": "2026-11-20"
   },
   {
     "date": "2026-10-07",
@@ -1147,19 +1089,11 @@
     "org": "Anthropic",
     "source": "openrouter",
     "ref": "anthropic/claude-haiku-5.5",
-    "firstSeen": "2026-11-19"
+    "firstSeen": "2026-11-20"
   },
   {
     "date": "2026-10-06",
-    "name": "Google: Nano Banana 2.1",
-    "org": "Google",
-    "source": "openrouter",
-    "ref": "google/gemini-nano-banana-2.1",
-    "firstSeen": "2026-11-19"
-  },
-  {
-    "date": "2026-10-06",
-    "name": "Mistral: Mistral Large 4",
+    "name": "Mistral Large 4",
     "org": "Mistral",
     "source": "openrouter",
     "ref": "mistralai/mistral-large-4-0",
@@ -1175,10 +1109,18 @@
   },
   {
     "date": "2026-10-06",
-    "name": "Mistral Large 4",
+    "name": "Mistral: Mistral Large 4",
     "org": "Mistral",
     "source": "openrouter",
     "ref": "mistralai/mistral-large-4-0",
+    "firstSeen": "2026-11-19"
+  },
+  {
+    "date": "2026-10-06",
+    "name": "Google: Nano Banana 2.1",
+    "org": "Google",
+    "source": "openrouter",
+    "ref": "google/gemini-nano-banana-2.1",
     "firstSeen": "2026-11-19"
   }
 ]
