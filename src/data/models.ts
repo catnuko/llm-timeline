@@ -97,6 +97,7 @@ export const RELEASES: Release[] = [
   { date: '2026-11-14', name: 'WeVisForensics', org: '腾讯', openness: 'open', tag: '旗舰' },
   { date: '2026-11-15', name: 'Sage-S2.1-Flash', org: '上海 AI 实验室', openness: 'open', tag: '轻量' },
   { date: '2026-11-17', name: '混元 Hy4-Flash', org: '腾讯', openness: 'open', tag: '轻量', note: 'Hy4 的开放权重轻量版' },
+  { date: '2026-11-17', name: 'WeMM-Video-9B', org: '腾讯', openness: 'open', tag: '多模态' },
 
   // ============ 闭源 ============
   // --- 2023 ---
