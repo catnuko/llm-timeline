@@ -67,10 +67,20 @@ const HF_AUTHORS = [
 ]
 
 const norm = (s) =>
-  s
+  bareName(s)
     .toLowerCase()
     .replace(/\(free\)|\(beta\)|\bfree\b/g, '')
     .replace(/[-_\s]+/g, '')
+    .trim()
+
+/**
+ * 还原模型本名：剥掉 OpenRouter 展示名里的厂商前缀（"Google: Gemini 4 Neon" → "Gemini 4 Neon"）。
+ * 采集与去重必须共用这一个函数，否则带前缀的记录永远匹配不到 models.ts 里的裸名条目。
+ */
+const bareName = (s) =>
+  String(s ?? '')
+    .replace(/^[A-Za-z0-9 ._-]{1,20}:\s*/, '')
+    .replace(/\s*\(free\)$/i, '')
     .trim()
 
 /** 量化 / 转换 / 蒸馏 / 投机解码等派生版本，不是一次新发布 */
@@ -109,10 +119,7 @@ async function fromOpenRouter() {
     const org = VENDOR[prefix]
     if (!org) continue
     if (/:batch|:free|:thinking|:online|:exacto/.test(raw)) continue
-    const name = (m.name || clean.split('/').pop())
-      .replace(/^[^:]{1,12}:\s*/, '')
-      .replace(/\s*\(free\)$/i, '')
-      .trim()
+    const name = bareName(m.name || clean.split('/').pop())
     out.push({ date: iso(new Date(m.created * 1000)), name, org, source: 'openrouter', ref: raw })
   }
   return out
@@ -146,18 +153,23 @@ async function fromHuggingFace() {
   return out
 }
 
+/** 再松一档：去掉中文厂商前缀（"混元 Hy4-Flash" 对 "Hy4-flash"），只用于去重比对 */
+const looseNorm = (s) => norm(s).replace(/[\u4e00-\u9fff]/g, '')
+
 function existingKeys() {
   const src = readFile(MODELS, 'utf8')
   return src.then((text) => {
     const keys = new Set()
+    const looseKeys = new Set()
     for (const m of text.matchAll(/date: '([^']+)',\s*name: '([^']+)'/g)) {
       keys.add(`${m[1]}|${norm(m[2])}`)
+      looseKeys.add(`${m[1]}|${looseNorm(m[2])}`)
     }
-    return keys
+    return { keys, looseKeys }
   })
 }
 
-const [keys, or, hf] = await Promise.all([existingKeys(), fromOpenRouter(), fromHuggingFace()])
+const [{ keys, looseKeys }, or, hf] = await Promise.all([existingKeys(), fromOpenRouter(), fromHuggingFace()])
 
 const seen = new Set()
 let pool = [...or, ...hf].filter((c) => {
@@ -172,6 +184,28 @@ for (const c of pool) {
   if (!cur || c.name.length < cur.length) shortNames.set(k, c.name)
 }
 const fresh = []
+/** 尺寸档位（-2B / -9B / -35BA3B …）折叠成同一家族，与 README 里的收录口径一致 */
+const familyOf = (normName) => normName.replace(/(a?\d+(\.\d+)?b)+$/, '')
+
+/** 已在 models.ts 里出现过（同日同名、任意日期的同名再版，或同日同家族的不同尺寸档） */
+function alreadyKnown(date, name) {
+  const n = norm(name)
+  for (const k of keys) if (k.endsWith(`|${n}`)) return true
+  if (keys.has(`${date}|${n}`)) return true
+  const ln = looseNorm(name)
+  if (ln) {
+    for (const k of looseKeys) if (k.endsWith(`|${ln}`)) return true
+  }
+  const fam = familyOf(n)
+  if (fam && fam !== n) {
+    for (const k of keys) {
+      const bar = k.indexOf('|')
+      if (k.slice(0, bar) === date && familyOf(k.slice(bar + 1)) === fam) return true
+    }
+  }
+  return false
+}
+
 for (const c of pool) {
   const d = new Date(c.date)
   if (!ALL && d < cutoff) continue
@@ -181,7 +215,7 @@ for (const c of pool) {
   const key = `${c.date}|${norm(c.name)}`
   if (keys.has(key) || seen.has(key)) continue
   // 同名已收录（不同日期）多为再版，跳过
-  if ([...keys].some((k) => k.endsWith(`|${norm(c.name)}`))) continue
+  if (alreadyKnown(c.date, c.name)) continue
   seen.add(key)
   fresh.push(c)
 }
@@ -192,6 +226,12 @@ let prev = []
 try {
   prev = JSON.parse(await readFile(OUT, 'utf8'))
 } catch {}
+
+// 候选池里上一轮遗留的记录也要按当前 models.ts 重新体检一遍：
+// 已经落库的、属于派生版的、名字带厂商前缀的都清出去，避免周报里反复出现老模型。
+prev = prev
+  .map((c) => ({ ...c, name: bareName(c.name) }))
+  .filter((c) => !DERIVATIVE.test(c.name) && !alreadyKnown(c.date, c.name))
 
 const merged = [...fresh, ...prev]
 const byKey = new Map()
