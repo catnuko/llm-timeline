@@ -1,6 +1,6 @@
 # LLM Timeline · 大模型时间线
 
-A horizontal timeline of large-language-model releases, 2023.01 → 2026.11. Open-weight models sit above the axis on a warm wash, closed-source models below on a cool one: 169 curated releases, drawn against a monthly scale, scrolled sideways.
+A horizontal timeline of large-language-model releases, 2023.01 → 2026.11. Open-weight models sit above the axis on a warm wash, closed-source models below on a cool one: 183 curated releases, drawn against a monthly scale, scrolled sideways.
 
 **[Open the live timeline →](https://llm-timeline-amber.vercel.app/)** · [简体中文 README](README.zh-CN.md)
 
@@ -9,7 +9,7 @@ A horizontal timeline of large-language-model releases, 2023.01 → 2026.11. Ope
 ## Features
 
 - **Horizontal timeline** — the mouse wheel pans sideways; drag, `←` / `→`, and 92–260 px/month zoom are also supported.
-- **Two camps, one axis** — open weights above the centred axis on a pale red band, closed source below on a pale blue band. 75 open, 94 closed.
+- **Two camps, one axis** — open weights above the centred axis on a pale red band, closed source below on a pale blue band. 79 open, 104 closed.
 - **Month ticks and release dates** — every release day gets a tick and a date label; multiple releases on the same day are stacked and counted (`09.22 · 3`).
 - **Greedy lane packing** — cards that would collide fall into deeper lanes; when density gets extreme the cards switch to a single-line compact mode. Verified at 0 overlaps across three viewports and both themes.
 - **Chinese / English** — one click in the header switches every label, organisation name, and Chinese model name (文心一言 → ERNIE Bot, 混元 Hy4 → Hunyuan Hy4). The choice is persisted.
@@ -44,7 +44,7 @@ Two GitHub Actions keep the data honest without a human in the loop:
 
 ## Data
 
-`src/data/models.ts` holds 169 entries — 75 open-weight, 94 closed-source — each shaped as:
+`src/data/models.ts` holds 183 entries — 79 open-weight, 104 closed-source — each shaped as:
 
 ```ts
 { date: '2025-04-05', name: 'Llama 4 Maverick', org: 'Meta', openness: 'open', tag: '旗舰', note?: string }
